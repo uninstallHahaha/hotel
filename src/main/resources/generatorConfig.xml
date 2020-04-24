@@ -18,7 +18,7 @@
 
         <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/management"
+                        connectionURL="jdbc:mysql://localhost:3306/hotel"
                         userId="root"
                         password="123123">
         </jdbcConnection>
@@ -59,10 +59,14 @@
         可以设置为somepck.domainName，那么会自动把domainName类再放到somepck包里面；
         -->
 <!--        <table tableName="achi" domainObjectName="Achi"></table>-->
-        <table tableName="log" domainObjectName="Log"></table>
+<!--        <table tableName="log" domainObjectName="Log"></table>-->
 <!--        <table tableName="message" domainObjectName="Message"></table>-->
 <!--        <table tableName="notice" domainObjectName="Notice"></table>-->
 <!--        <table tableName="proj" domainObjectName="Proj"></table>-->
 <!--        <table tableName="user" domainObjectName="User"></table>-->
+        <table tableName="dish" domainObjectName="Dish"></table>
+        <table tableName="order" domainObjectName="Order"></table>
+        <table tableName="service" domainObjectName="Service"></table>
+        <table tableName="wine" domainObjectName="Wine"></table>
     </context>
 </generatorConfiguration>
