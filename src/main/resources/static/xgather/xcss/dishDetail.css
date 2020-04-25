@@ -1,0 +1,7 @@
+#selDishCount{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+}

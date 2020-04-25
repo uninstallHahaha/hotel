@@ -4,12 +4,14 @@
   <resultMap id="BaseResultMap" type="per.aclic.managesys.model.Dish">
     <id column="id" jdbcType="VARCHAR" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="raw" jdbcType="VARCHAR" property="raw" />
+    <result column="sdetail" jdbcType="VARCHAR" property="sdetail" />
     <result column="detail" jdbcType="VARCHAR" property="detail" />
-    <result column="price" jdbcType="DECIMAL" property="price" />
+    <result column="price" jdbcType="INTEGER" property="price" />
+    <result column="raw" jdbcType="VARCHAR" property="raw" />
+    <result column="label" jdbcType="VARCHAR" property="label" />
     <result column="type" jdbcType="INTEGER" property="type" />
     <result column="pic" jdbcType="VARCHAR" property="pic" />
-    <result column="stime" jdbcType="TIMESTAMP" property="stime" />
+    <result column="stime" jdbcType="INTEGER" property="stime" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -70,8 +72,10 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, name, raw, detail, price, type, pic, stime
+    id, name, sdetail, detail, price, raw, label, type, pic, stime
   </sql>
+
+
   <select id="selectByExample" parameterType="per.aclic.managesys.model.DishExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
@@ -86,12 +90,32 @@
       order by ${orderByClause}
     </if>
   </select>
+
+
+  <select id="selectTopDish" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    *
+    from dish
+    limit 10
+  </select>
+
+
+  <select id="selectByType" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    *
+    from dish
+    where type=#{type}
+  </select>
+
+
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from dish
     where id = #{id,jdbcType=VARCHAR}
   </select>
+
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from dish
     where id = #{id,jdbcType=VARCHAR}
@@ -103,12 +127,14 @@
     </if>
   </delete>
   <insert id="insert" parameterType="per.aclic.managesys.model.Dish">
-    insert into dish (id, name, raw, 
-      detail, price, type, 
-      pic, stime)
-    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{raw,jdbcType=VARCHAR}, 
-      #{detail,jdbcType=VARCHAR}, #{price,jdbcType=DECIMAL}, #{type,jdbcType=INTEGER}, 
-      #{pic,jdbcType=VARCHAR}, #{stime,jdbcType=TIMESTAMP})
+    insert into dish (id, name, sdetail, 
+      detail, price, raw, 
+      label, type, pic, stime
+      )
+    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{sdetail,jdbcType=VARCHAR}, 
+      #{detail,jdbcType=VARCHAR}, #{price,jdbcType=INTEGER}, #{raw,jdbcType=VARCHAR}, 
+      #{label,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, #{pic,jdbcType=VARCHAR}, #{stime,jdbcType=INTEGER}
+      )
   </insert>
   <insert id="insertSelective" parameterType="per.aclic.managesys.model.Dish">
     insert into dish
@@ -119,14 +145,20 @@
       <if test="name != null">
         name,
       </if>
-      <if test="raw != null">
-        raw,
+      <if test="sdetail != null">
+        sdetail,
       </if>
       <if test="detail != null">
         detail,
       </if>
       <if test="price != null">
         price,
+      </if>
+      <if test="raw != null">
+        raw,
+      </if>
+      <if test="label != null">
+        label,
       </if>
       <if test="type != null">
         type,
@@ -145,14 +177,20 @@
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
       </if>
-      <if test="raw != null">
-        #{raw,jdbcType=VARCHAR},
+      <if test="sdetail != null">
+        #{sdetail,jdbcType=VARCHAR},
       </if>
       <if test="detail != null">
         #{detail,jdbcType=VARCHAR},
       </if>
       <if test="price != null">
-        #{price,jdbcType=DECIMAL},
+        #{price,jdbcType=INTEGER},
+      </if>
+      <if test="raw != null">
+        #{raw,jdbcType=VARCHAR},
+      </if>
+      <if test="label != null">
+        #{label,jdbcType=VARCHAR},
       </if>
       <if test="type != null">
         #{type,jdbcType=INTEGER},
@@ -161,16 +199,20 @@
         #{pic,jdbcType=VARCHAR},
       </if>
       <if test="stime != null">
-        #{stime,jdbcType=TIMESTAMP},
+        #{stime,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
+
+
   <select id="countByExample" parameterType="per.aclic.managesys.model.DishExample" resultType="java.lang.Long">
     select count(*) from dish
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
+
+
   <update id="updateByExampleSelective" parameterType="map">
     update dish
     <set>
@@ -180,14 +222,20 @@
       <if test="record.name != null">
         name = #{record.name,jdbcType=VARCHAR},
       </if>
-      <if test="record.raw != null">
-        raw = #{record.raw,jdbcType=VARCHAR},
+      <if test="record.sdetail != null">
+        sdetail = #{record.sdetail,jdbcType=VARCHAR},
       </if>
       <if test="record.detail != null">
         detail = #{record.detail,jdbcType=VARCHAR},
       </if>
       <if test="record.price != null">
-        price = #{record.price,jdbcType=DECIMAL},
+        price = #{record.price,jdbcType=INTEGER},
+      </if>
+      <if test="record.raw != null">
+        raw = #{record.raw,jdbcType=VARCHAR},
+      </if>
+      <if test="record.label != null">
+        label = #{record.label,jdbcType=VARCHAR},
       </if>
       <if test="record.type != null">
         type = #{record.type,jdbcType=INTEGER},
@@ -196,7 +244,7 @@
         pic = #{record.pic,jdbcType=VARCHAR},
       </if>
       <if test="record.stime != null">
-        stime = #{record.stime,jdbcType=TIMESTAMP},
+        stime = #{record.stime,jdbcType=INTEGER},
       </if>
     </set>
     <if test="_parameter != null">
@@ -207,12 +255,14 @@
     update dish
     set id = #{record.id,jdbcType=VARCHAR},
       name = #{record.name,jdbcType=VARCHAR},
-      raw = #{record.raw,jdbcType=VARCHAR},
+      sdetail = #{record.sdetail,jdbcType=VARCHAR},
       detail = #{record.detail,jdbcType=VARCHAR},
-      price = #{record.price,jdbcType=DECIMAL},
+      price = #{record.price,jdbcType=INTEGER},
+      raw = #{record.raw,jdbcType=VARCHAR},
+      label = #{record.label,jdbcType=VARCHAR},
       type = #{record.type,jdbcType=INTEGER},
       pic = #{record.pic,jdbcType=VARCHAR},
-      stime = #{record.stime,jdbcType=TIMESTAMP}
+      stime = #{record.stime,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -223,14 +273,20 @@
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="raw != null">
-        raw = #{raw,jdbcType=VARCHAR},
+      <if test="sdetail != null">
+        sdetail = #{sdetail,jdbcType=VARCHAR},
       </if>
       <if test="detail != null">
         detail = #{detail,jdbcType=VARCHAR},
       </if>
       <if test="price != null">
-        price = #{price,jdbcType=DECIMAL},
+        price = #{price,jdbcType=INTEGER},
+      </if>
+      <if test="raw != null">
+        raw = #{raw,jdbcType=VARCHAR},
+      </if>
+      <if test="label != null">
+        label = #{label,jdbcType=VARCHAR},
       </if>
       <if test="type != null">
         type = #{type,jdbcType=INTEGER},
@@ -239,7 +295,7 @@
         pic = #{pic,jdbcType=VARCHAR},
       </if>
       <if test="stime != null">
-        stime = #{stime,jdbcType=TIMESTAMP},
+        stime = #{stime,jdbcType=INTEGER},
       </if>
     </set>
     where id = #{id,jdbcType=VARCHAR}
@@ -247,12 +303,14 @@
   <update id="updateByPrimaryKey" parameterType="per.aclic.managesys.model.Dish">
     update dish
     set name = #{name,jdbcType=VARCHAR},
-      raw = #{raw,jdbcType=VARCHAR},
+      sdetail = #{sdetail,jdbcType=VARCHAR},
       detail = #{detail,jdbcType=VARCHAR},
-      price = #{price,jdbcType=DECIMAL},
+      price = #{price,jdbcType=INTEGER},
+      raw = #{raw,jdbcType=VARCHAR},
+      label = #{label,jdbcType=VARCHAR},
       type = #{type,jdbcType=INTEGER},
       pic = #{pic,jdbcType=VARCHAR},
-      stime = #{stime,jdbcType=TIMESTAMP}
+      stime = #{stime,jdbcType=INTEGER}
     where id = #{id,jdbcType=VARCHAR}
   </update>
 </mapper>

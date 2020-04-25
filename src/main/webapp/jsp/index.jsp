@@ -1,5 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="keywords" content=""><meta name="description" content=""><meta name="author" content="Maker Cloud"><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black" name="apple-mobile-web-app-status-bar-style" /><meta content="telephone=no" name="format-detection" />
 <link rel="stylesheet" type="text/css" href="templets/cloud_04/style/lib.css"
@@ -133,18 +136,17 @@
         <ul id="nav">
             <li class="navitem"><a class='active' href="index.htm" tppabs="http://dede24.va666.com/"
                                    target="_self">首页</a></li>
-            <li class="navitem"><a class='' href="a/caipin/index.htm" tppabs="http://dede24.va666.com/a/caipin/">菜品
+            <li class="navitem"><a class='' href="/getDishList/0" tppabs="http://dede24.va666.com/a/caipin/">菜品
                 <!--
                 <i class='fa fa-angle-down'></i>
                 -->
             </a>
                 <ul class="subnav">
-                    <li><a href="a/caipin/toupan/index.htm" tppabs="http://dede24.va666.com/a/caipin/toupan">头盘</a></li>
-                    <li><a href="a/caipin/liangtang/index.htm"
-                           tppabs="http://dede24.va666.com/a/caipin/liangtang">靓汤</a></li>
-                    <li><a href="a/caipin/fucai/index.htm" tppabs="http://dede24.va666.com/a/caipin/fucai">副菜</a></li>
-                    <li><a href="a/caipin/zhucai/index.htm" tppabs="http://dede24.va666.com/a/caipin/zhucai">主菜</a></li>
-                    <li><a href="a/caipin/shuguo/index.htm" tppabs="http://dede24.va666.com/a/caipin/shuguo">蔬果</a></li>
+                    <li><a href="/getDishList/1"  >头盘</a></li>
+                    <li><a href="/getDishList/2" >副菜</a></li>
+                    <li><a href="/getDishList/3" >靓汤</a></li>
+                    <li><a href="/getDishList/4" >主菜</a></li>
+                    <li><a href="/getDishList/5" >蔬果</a></li>
                 </ul>
             </li>
 
@@ -261,19 +263,19 @@
                 </div>
                 <div id="category" class="hide wow">
 
-                    <a href="a/caipin/toupan/index.htm" tppabs="http://dede24.va666.com/a/caipin/toupan/">头盘</a>
+                    <a href="/getDishList/1" >头盘</a>
 
 
-                    <a href="a/caipin/fucai/index.htm" tppabs="http://dede24.va666.com/a/caipin/fucai/">副菜</a>
+                    <a href="/getDishList/2" >副菜</a>
 
 
-                    <a href="a/caipin/liangtang/index.htm" tppabs="http://dede24.va666.com/a/caipin/liangtang/">靓汤</a>
+                    <a href="/getDishList/3" >靓汤</a>
 
 
-                    <a href="a/caipin/zhucai/index.htm" tppabs="http://dede24.va666.com/a/caipin/zhucai/">主菜</a>
+                    <a href="/getDishList/4" >主菜</a>
 
 
-                    <a href="a/caipin/shuguo/index.htm" tppabs="http://dede24.va666.com/a/caipin/shuguo/">蔬果</a>
+                    <a href="/getDishList/5" >蔬果</a>
 
 
                 </div>
@@ -287,206 +289,31 @@
                         <div class="wrapper">
                             <ul class="content_list" data-options-sliders="4" data-options-margin="20"
                                 data-options-ease="cubic-bezier(.73,-0.03,.24,1.01)" data-options-speed="0.5">
-                                <li id="projectitem_1" class="projectitem wow">
-                                    <a href="a/caipin/toupan/1.html"
-                                       tppabs="http://dede24.va666.com/a/caipin/toupan/1.html"
-                                       class="projectitem_content" target="_blank">
-                                        <div class="projectitem_wrapper">
-                                            <div class="project_img"><img
-                                                    src="uploads/allimg/160916/1-1609161612570-L.jpg"
-                                                    tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161612570-L.jpg"
-                                                    width="650" height="385"/></div>
-                                            <div class="project_info">
-                                                <div>
-                                                    <p class="title">鲜柠香煎银鳕鱼</p>
-                                                    <p class="subtitle">经典西式大餐</p>
-                                                    <p class="description hide">Semestral project - publicLocation:
-                                                        Nałęczów, PolandStatus: ideadate: 2016在线预约</p>
+
+                                <c:forEach items="${topDish}" var="d">
+
+                                    <li id="projectitem_1" class="projectitem wow">
+                                        <a href='/getDish/${d.id}'
+                                           tppabs="http://dede24.va666.com/a/caipin/toupan/1.html"
+                                           class="projectitem_content" target="_self">
+                                            <div class="projectitem_wrapper">
+                                                <div class="project_img"><img
+                                                        src="uploads/allimg/160916/1 (<%=(int)(Math.floor(Math.random()*10+1))%>).jpg"
+                                                        tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161612570-L.jpg"
+                                                        width="650" height="385"/></div>
+                                                <div class="project_info">
+                                                    <div>
+                                                        <p class="title">${d.name}</p>
+                                                        <p class="subtitle">${d.sdetail}</p>
+                                                        <p class="description hide">Semestral project - publicLocation:
+                                                            Nałęczów, PolandStatus: ideadate: 2016在线预约</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li id="projectitem_2" class="projectitem wow">
-                                    <a href="a/caipin/shuguo/2.html"
-                                       tppabs="http://dede24.va666.com/a/caipin/shuguo/2.html"
-                                       class="projectitem_content" target="_blank">
-                                        <div class="projectitem_wrapper">
-                                            <div class="project_img"><img
-                                                    src="uploads/allimg/160916/1-1609161631230-L.jpg"
-                                                    tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161631230-L.jpg"
-                                                    width="650" height="385"/></div>
-                                            <div class="project_info">
-                                                <div>
-                                                    <p class="title">Santa Maria BBQ Tri-Tip</p>
-                                                    <p class="subtitle">bacon-ranchero</p>
-                                                    <p class="description hide">Semestral project - publicLocation:
-                                                        Nałęczów, PolandStatus: ideadate: 2016在线预约</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li id="projectitem_3" class="projectitem wow">
-                                    <a href="a/caipin/zhucai/3.html"
-                                       tppabs="http://dede24.va666.com/a/caipin/zhucai/3.html"
-                                       class="projectitem_content" target="_blank">
-                                        <div class="projectitem_wrapper">
-                                            <div class="project_img"><img
-                                                    src="uploads/allimg/160916/1-160916163H00-L.jpg"
-                                                    tppabs="http://dede24.va666.com/uploads/allimg/160916/1-160916163H00-L.jpg"
-                                                    width="650" height="385"/></div>
-                                            <div class="project_info">
-                                                <div>
-                                                    <p class="title">南非龙虾配澳洲带子（虾</p>
-                                                    <p class="subtitle">头盘开胃菜</p>
-                                                    <p class="description hide">Semestral project - publicLocation:
-                                                        Nałęczów, PolandStatus: ideadate: 2016在线预约</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li id="projectitem_4" class="projectitem wow">
-                                    <a href="a/caipin/zhucai/4.html"
-                                       tppabs="http://dede24.va666.com/a/caipin/zhucai/4.html"
-                                       class="projectitem_content" target="_blank">
-                                        <div class="projectitem_wrapper">
-                                            <div class="project_img"><img
-                                                    src="uploads/allimg/160916/1-1609161639520-L.jpg"
-                                                    tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161639520-L.jpg"
-                                                    width="650" height="385"/></div>
-                                            <div class="project_info">
-                                                <div>
-                                                    <p class="title">海鲜烩牛仔骨</p>
-                                                    <p class="subtitle">副菜菜肴</p>
-                                                    <p class="description hide">Semestral project - publicLocation:
-                                                        Nałęczów, PolandStatus: ideadate: 2016在线预约</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li id="projectitem_5" class="projectitem wow">
-                                    <a href="a/caipin/fucai/5.html"
-                                       tppabs="http://dede24.va666.com/a/caipin/fucai/5.html"
-                                       class="projectitem_content" target="_blank">
-                                        <div class="projectitem_wrapper">
-                                            <div class="project_img"><img
-                                                    src="uploads/allimg/160916/1-1609161642530-L.jpg"
-                                                    tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161642530-L.jpg"
-                                                    width="650" height="385"/></div>
-                                            <div class="project_info">
-                                                <div>
-                                                    <p class="title">奶油蘑菇汤配蒜香法包</p>
-                                                    <p class="subtitle">法式局葱头汤</p>
-                                                    <p class="description hide">Semestral project - publicLocation:
-                                                        Nałęczów, PolandStatus: ideadate: 2016在线预约</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li id="projectitem_6" class="projectitem wow">
-                                    <a href="a/caipin/zhucai/26.html"
-                                       tppabs="http://dede24.va666.com/a/caipin/zhucai/26.html"
-                                       class="projectitem_content" target="_blank">
-                                        <div class="projectitem_wrapper">
-                                            <div class="project_img"><img
-                                                    src="uploads/allimg/160916/1-1609161951300-L.jpg"
-                                                    tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161951300-L.jpg"
-                                                    width="650" height="385"/></div>
-                                            <div class="project_info">
-                                                <div>
-                                                    <p class="title">花椰菜生蔬菜沙拉</p>
-                                                    <p class="subtitle">蔬菜沙拉</p>
-                                                    <p class="description hide">Semestral project - publicLocation:
-                                                        Nałęczów, PolandStatus: ideadate: 2016在线预约</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li id="projectitem_7" class="projectitem wow">
-                                    <a href="a/caipin/zhucai/27.html"
-                                       tppabs="http://dede24.va666.com/a/caipin/zhucai/27.html"
-                                       class="projectitem_content" target="_blank">
-                                        <div class="projectitem_wrapper">
-                                            <div class="project_img"><img
-                                                    src="uploads/allimg/160916/1-1609161953070-L.jpg"
-                                                    tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161953070-L.jpg"
-                                                    width="650" height="385"/></div>
-                                            <div class="project_info">
-                                                <div>
-                                                    <p class="title">四季水果摩卡慕斯</p>
-                                                    <p class="subtitle">甜品</p>
-                                                    <p class="description hide">Semestral project - publicLocation:
-                                                        Nałęczów, PolandStatus: ideadate: 2016在线预约</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li id="projectitem_8" class="projectitem wow">
-                                    <a href="a/caipin/zhucai/28.html"
-                                       tppabs="http://dede24.va666.com/a/caipin/zhucai/28.html"
-                                       class="projectitem_content" target="_blank">
-                                        <div class="projectitem_wrapper">
-                                            <div class="project_img"><img
-                                                    src="uploads/allimg/160916/1-160916220J30-L.jpg"
-                                                    tppabs="http://dede24.va666.com/uploads/allimg/160916/1-160916220J30-L.jpg"
-                                                    width="650" height="385"/></div>
-                                            <div class="project_info">
-                                                <div>
-                                                    <p class="title">黑椒牛仔骨配黄油西兰花</p>
-                                                    <p class="subtitle">头盘开胃菜</p>
-                                                    <p class="description hide">Semestral project - publicLocation:
-                                                        Nałęczów, PolandStatus: ideadate: 2016在线预约</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li id="projectitem_9" class="projectitem wow">
-                                    <a href="a/caipin/zhucai/29.html"
-                                       tppabs="http://dede24.va666.com/a/caipin/zhucai/29.html"
-                                       class="projectitem_content" target="_blank">
-                                        <div class="projectitem_wrapper">
-                                            <div class="project_img"><img
-                                                    src="uploads/allimg/160916/1-1609162211240-L.jpg"
-                                                    tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609162211240-L.jpg"
-                                                    width="650" height="385"/></div>
-                                            <div class="project_info">
-                                                <div>
-                                                    <p class="title">奶豆腐配美味啫喱</p>
-                                                    <p class="subtitle">bacon-ranchero</p>
-                                                    <p class="description hide">Semestral project - publicLocation:
-                                                        Nałęczów, PolandStatus: ideadate: 2016在线预约</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li id="projectitem_10" class="projectitem wow">
-                                    <a href="a/caipin/fucai/30.html"
-                                       tppabs="http://dede24.va666.com/a/caipin/fucai/30.html"
-                                       class="projectitem_content" target="_blank">
-                                        <div class="projectitem_wrapper">
-                                            <div class="project_img"><img
-                                                    src="uploads/allimg/160916/1-1609162234310-L.jpg"
-                                                    tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609162234310-L.jpg"
-                                                    width="650" height="385"/></div>
-                                            <div class="project_info">
-                                                <div>
-                                                    <p class="title">新西兰羊排配黑椒蘑菇汁</p>
-                                                    <p class="subtitle">意式蔬菜汤</p>
-                                                    <p class="description hide">Semestral project - publicLocation:
-                                                        Nałęczów, PolandStatus: ideadate: 2016在线预约</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
+                                        </a>
+                                    </li>
+
+                                </c:forEach>
 
                             </ul>
                         </div><!--wrapper-->
@@ -725,7 +552,7 @@
                                     width="180" height="180"/></a></div>
                             <div class="summary wow">
                                 <p class="title"><a href="a/guanyu/tuandui/6.html"
-                                                    tppabs="http://dede24.va666.com/a/guanyu/tuandui/6.html">王嘉尔 /
+                                                    tppabs="http://dede24.va666.com/a/guanyu/tuandui/6.html">
                                     Joseph</a></p>
                                 <p class="subtitle">Joseph</p>
                                 <p class="description wow">- station host computer desktop wallpaper cool Sibutramine
@@ -784,8 +611,8 @@
     <div id="mpartner" class="module">
         <div class="bgmask"></div>
         <div class="content layoutslider">
-            <div class="header wow fw" data-wow-delay=".1s"><p class="title">新闻</p>
-                <p class="subtitle">news</p></div>
+            <div class="header wow fw" data-wow-delay=".1s"><p class="title">合作单位</p>
+                <p class="subtitle">relationship</p></div>
             <div class="module-content fw">
                 <div class="wrapper">
                     <ul class="content_list" data-options-ease="1" data-options-speed="0.5">
@@ -825,28 +652,28 @@
         <div class="bgmask"></div>
         <div class="content">
             <div class="header wow fadeInUp fw" data-wow-delay=".1s">
-                <p class="title">联系</p>
+                <p class="title">反馈</p>
                 <p class="subtitle">Contact Us</p>
             </div>
             <div id="contactlist" class="fw">
                 <div id="contactinfo" class="fl wow" data-wow-delay=".2s">
 
-                    <h3 class="ellipsis name">深圳市创客云文化传播有限公司</h3>
+                    <h3 class="ellipsis name">MARRIOT.T</h3>
                     <p class="ellipsis add"><span>地点：</span>Do You Best,Mutually Promote Symbiosis</p>
-                    <p class="ellipsis zip"><span>邮编：</span>4651122</p>
-                    <p class="ellipsis tel"><span>电话：</span>0755-28856999</p>
-                    <p class="ellipsis mobile"><span>手机：</span>13933796899</p>
-                    <p class="ellipsis email"><span>邮箱：</span>admin@22vd.com</p>
+                    <p class="ellipsis zip"><span>邮编：</span>4678900</p>
+                    <p class="ellipsis tel"><span>电话：</span>0755-88888888</p>
+                    <p class="ellipsis mobile"><span>手机：</span>18888888888</p>
+                    <p class="ellipsis email"><span>邮箱：</span>alice@88.com</p>
                     <div><a class="fl" target="_blank" href="#"><i class="fa fa-weibo"></i></a><a class="fl"
                                                                                                   target="_blank"
-                                                                                                  href="tencent://message/?uin=888889999&Site=uemo&Menu=yes"><i
+                                                                                                  href="#"><i
                             class="fa fa-qq"></i></a> <a id="mpbtn" class="fl"
                                                          href="javascript:if(confirm('http://dede24.va666.com/templets/cloud_04/images/1438424052624.jpg  \n\n���ļ�δ�� Teleport Pro ���أ���Ϊ ����һ��λ���ѱ�վ����������ų���׼���������Ե�·����ַ��(Teleport Pro ���ԶԸ�ѡ��������ã�����ġ��������ԡ�-������淶��)  \n\n����Ҫ�ӷ�����������?'))window.location='http://dede24.va666.com/templets/cloud_04/images/1438424052624.jpg'"
                                                          tppabs="http://dede24.va666.com/templets/cloud_04/images/1438424052624.jpg"><i
                             class="fa fa-weixin"></i></a></div>
                 </div>
                 <div id="contactform" class="fr wow" data-wow-delay=".2s">
-                    <form action="http://dede24.va666.com/plus/diy.php" enctype="multipart/form-data" method="post">
+                    <form action="/subReview" enctype="multipart/form-data" method="post">
                         <input type="hidden" name="action" value="post"/>
                         <input type="hidden" name="diyid" value="1"/>
                         <input type="hidden" name="do" value="2"/>

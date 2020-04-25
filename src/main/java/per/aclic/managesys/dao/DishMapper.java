@@ -2,9 +2,11 @@ package per.aclic.managesys.dao;
 
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 import per.aclic.managesys.model.Dish;
 import per.aclic.managesys.model.DishExample;
 
+@Repository
 public interface DishMapper {
     long countByExample(DishExample example);
 
@@ -27,4 +29,8 @@ public interface DishMapper {
     int updateByPrimaryKeySelective(Dish record);
 
     int updateByPrimaryKey(Dish record);
+
+    List<Dish> selectTopDish();
+
+    List<Dish> selectByType(int type);
 }

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import per.aclic.managesys.service.DishService;
 
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
@@ -14,6 +15,8 @@ import java.util.List;
 @Controller
 public class PageController {
 
+    @Autowired
+    DishService dishService;
 
 
     //    模板跳转通用公式
@@ -26,7 +29,8 @@ public class PageController {
     }
 
     @RequestMapping("/")
-    public String getIndex(){
+    public String getIndex(Model model) {
+        model.addAttribute("topDish", dishService.findTopDish());
         return "index";
     }
 
