@@ -194,17 +194,28 @@
 </body>
 
 <div id="selDishCount" style="display: none">
-    <img width="400px" height="auto" alt="" src="../../../uploads/160916/1-16091616150CV.jpg"/>
-    <div class="layui-form-item">
+    <div class="imgwraper">
+        <h4 class="wrapertitle">选择数量</h4>
+    </div>
+    <div class="dishname">
+        <span>${dishInfo.name}</span>
+        <span>单价: ${dishInfo.price}</span>
+    </div>
+    <input value="${dishInfo.id}" id="dishid" style="display: none">
+    <input value="${dishInfo.name}" id="dishname" style="display: none">
+
+    <div class="layui-form-item" style="position: relative;top: 70px;">
         <label class="layui-form-label">数量: </label>
         <div class="layui-input-block">
             <input type="number" name="title"
+                   id="dishcount"
                    value="1"
                    onchange="noNagtive(this)" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
                    class="layui-input">
         </div>
     </div>
-    <button class="layui-btn" id="subTOCar">确定</button>
+<%--    <button class="layui-btn" id="subTOCar">确定</button>--%>
+    <div class="okbtn" id="subTOCar">确定</div>
 </div>
 
 
@@ -212,6 +223,7 @@
 <link rel="stylesheet" type="text/css" href="/xgather/xcss/dishDetail.css">
 
 <script src="/xgather/xlib/layui-v2.5.6/layui/layui.all.js"></script>
+<script src="/xgather/xlib/jquery.min.js"></script>
 <script src="/xgather/xlib/layer/layer.js"></script>
 <script src="/xgather/xjs/dishDetail.js"></script>
 

@@ -142,11 +142,11 @@
                 -->
             </a>
                 <ul class="subnav">
-                    <li><a href="/getDishList/1"  >头盘</a></li>
-                    <li><a href="/getDishList/2" >副菜</a></li>
-                    <li><a href="/getDishList/3" >靓汤</a></li>
-                    <li><a href="/getDishList/4" >主菜</a></li>
-                    <li><a href="/getDishList/5" >蔬果</a></li>
+                    <li><a href="/getDishList/1">头盘</a></li>
+                    <li><a href="/getDishList/2">副菜</a></li>
+                    <li><a href="/getDishList/3">靓汤</a></li>
+                    <li><a href="/getDishList/4">主菜</a></li>
+                    <li><a href="/getDishList/5">蔬果</a></li>
                 </ul>
             </li>
 
@@ -193,12 +193,13 @@
                            tppabs="http://dede24.va666.com/a/tuce/deshicaiyao">德式菜肴</a></li>
                 </ul>
             </li>
-            <li class="navitem"><a class='' href="a/fuwu/index.htm" tppabs="http://dede24.va666.com/a/fuwu/">服务
-                <!--
-                <i class='fa fa-angle-down'></i>
-                -->
-            </a>
-
+            <li class="navitem">
+                <a class='' href="a/fuwu/index.htm" tppabs="http://dede24.va666.com/a/fuwu/">服务
+                </a>
+            </li>
+            <li class="navitem">
+                <a class='' href="#" id="showCar">购物车
+                </a>
             </li>
         </ul>
         <div class="clear"></div>
@@ -263,19 +264,19 @@
                 </div>
                 <div id="category" class="hide wow">
 
-                    <a href="/getDishList/1" >头盘</a>
+                    <a href="/getDishList/1">头盘</a>
 
 
-                    <a href="/getDishList/2" >副菜</a>
+                    <a href="/getDishList/2">副菜</a>
 
 
-                    <a href="/getDishList/3" >靓汤</a>
+                    <a href="/getDishList/3">靓汤</a>
 
 
-                    <a href="/getDishList/4" >主菜</a>
+                    <a href="/getDishList/4">主菜</a>
 
 
-                    <a href="/getDishList/5" >蔬果</a>
+                    <a href="/getDishList/5">蔬果</a>
 
 
                 </div>
@@ -716,4 +717,42 @@
 
 <div class="hide"></div>
 </body>
+
+<%--购物车--%>
+<div id="cardiv" style="display: none">
+    <table class="table-cart" style="width: 100%">
+        <tbody>
+        <tr class="cartr">
+            <td class="title">
+                <span class="name">
+                    <a href="#productModal" data-toggle="modal">Pizza Chicked BBQ</a>
+                </span>
+            </td>
+            <td class="price">$9.82</td>
+            <td class="actions">
+                <a href="#productModal" data-toggle="modal" class="action-icon">
+                    <i class="layui-icon layui-icon-edit"></i>
+                </a>
+                <a href="#" class="action-icon">
+                    <i class="layui-icon layui-icon-close"></i>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="pricePlace">总计 :
+        <span class="priceNum"> 100.86$</span>
+    </div>
+    <a href="/getCheckoutPage"><div class="carBtn"  id="carBtn">结算</div></a>
+
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="/xgather/xcss/car.css">
+<link rel="stylesheet" type="text/css" href="/xgather/xlib/layui-v2.5.6/layui/css/layui.css">
+<script src="/xgather/xlib/layer/layer.js"></script>
+<script src="/xgather/xjs/car.js"></script>
+<script src="/xgather/xjs/util.js"></script>
+
+
 </html>

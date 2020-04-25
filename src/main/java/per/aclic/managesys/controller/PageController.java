@@ -20,18 +20,25 @@ public class PageController {
 
 
     //    模板跳转通用公式
-    @RequestMapping("/{first}/{second}")
-    public String getPage(@PathVariable String first, @PathVariable String second) {
-        String preStr = "mm/classic/mmenu/html/";
-        String[] splitSec = second.split(".html");
-        String resStr = preStr + first + "/" + splitSec[0];
-        return resStr;
-    }
+//    @RequestMapping("/{first}/{second}")
+//    public String getPage(@PathVariable String first, @PathVariable String second) {
+//        String preStr = "mm/classic/mmenu/html/";
+//        String[] splitSec = second.split(".html");
+//        String resStr = preStr + first + "/" + splitSec[0];
+//        return resStr;
+//    }
 
     @RequestMapping("/")
     public String getIndex(Model model) {
         model.addAttribute("topDish", dishService.findTopDish());
         return "index";
+    }
+
+
+
+    @RequestMapping("/getCheckoutPage")
+    public String getCheckoutPage(Model model) {
+        return "checkout";
     }
 
 }

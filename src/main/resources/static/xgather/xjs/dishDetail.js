@@ -8,19 +8,41 @@ function noNagtive(e)
 
 $(function(){
 
+    //选择数量层对象
+    var layerCount;
+
     $('#joinCarBtn').click(function () {
-        layer.open({
+        layerCount = layer.open({
             type: 1,
-            closeBtn: 0, //不显示关闭按钮
+            // offset: 'l',
+            title: false,
+            closeBtn: 1,
             anim: 2,
-            area: ['600px', '400px'],
-            shadeClose: true, //开启遮罩关闭
+            area: ['500px', '520px'],
+            shadeClose: true,
+            shade: 0.4,
             content: $('#selDishCount')
     });
     })
 
+    //添加到购物车
     $('#subTOCar').click(function () {
-
+        var id = $('#dishid').val()
+        var name = $('#dishname').val()
+        var count = $('#dishcount').val()
+        $.ajax({
+            url:'/addToCar',
+            data:{id:id,name:name,count:count},
+            method:'post',
+            success:function (res) {
+                if(res == 1){
+                    parent.layer.msg('添加成功')
+                }else{
+                    parent.layer.msg('添加失败')
+                }
+                layer.close(layerCount);
+            }
+        })
     })
 
 })
