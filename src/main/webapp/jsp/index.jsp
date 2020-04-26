@@ -705,7 +705,7 @@
     </div>
 </div>
 </div>
-<div id="footer"><p>COPYRIGHT (©) 2016 创客云版权所有</p></div>
+<div id="footer"><p>COPYRIGHT (©) 2016 创客云版权所有</p> </div>
 
 <div id="shares"><a id="sshare"><i class="fa fa-share-alt"></i></a><a
         href="javascript:if(confirm('http://service.weibo.com/share/share.php?appkey=3206975293&  \n\n���ļ�δ�� Teleport Pro ���أ���Ϊ ��λ����ʼ��ַ�����õı߽���������·���С�  \n\n����Ҫ�ӷ�����������?'))window.location='http://service.weibo.com/share/share.php?appkey=3206975293&'"
@@ -765,6 +765,7 @@
 <link rel="stylesheet" type="text/css" href="/xgather/xcss/dishDetail.css">
 
 <script src="/xgather/xlib/layui-v2.5.6/layui/layui.all.js"></script>
+<script src="/xgather/xlib/jquery.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="/xgather/xcss/car.css">
 <link rel="stylesheet" type="text/css" href="/xgather/xlib/layui-v2.5.6/layui/css/layui.css">

@@ -38,7 +38,7 @@ function initCarDOM() {
     //添加行
     items.forEach((item, index) => {
         var tDOM =
-            "<tr class=\"cartr\" id='"+item.id+"'>\n" +
+            "<tr class=\"cartr\" id='" + item.id + "'>\n" +
             "                                <td class=\"title\">\n" +
             "                                <span class=\"name\">\n" +
             "                                    <a href=\"#productModal\" data-toggle=\"modal\"> " + item.name + "</a>\n" +
@@ -51,9 +51,9 @@ function initCarDOM() {
             "data-name='" + item.name + "' data-price='" + item.price + "' data-toggle=\"modal\" class=\"action-icon\">\n" +
             "                                        <i class=\"layui-icon layui-icon-edit\"></i>\n" +
             "                                    </a>\n" +
-            "                                    <a href=\"#\" class=\"action-icon\" onclick='delItemFromCar(\""+item.id+"\")'>\n" +
-            "                                        <i class=\"layui-icon layui-icon-close\"></i>\n" +
-            "                                    </a>\n" +
+            "                                    <a href=\"#\" class=\"action-icon\" onclick='delItemFromCar(\"" + item.id + "\")'>\n" +  //<a href=\"#\" class=\"action-icon\" onclick='delItemFromCar(\""+item.id+"\")'>
+            "                                        <i class=\"layui-icon layui-icon-close\" ></i>\n" +
+            "                                    </a>\n" +  //</a>
             "                                </td>\n" +
             "                            </tr>"
         $('#carTbody').append(tDOM)
@@ -75,7 +75,7 @@ function showCountModal(the) {
     $('#dishname').val($(the).attr('data-name'))
     $('#dishprice').val($(the).attr('data-price'))
     //弹窗
-     layerCount = layer.open({
+    layerCount = layer.open({
         type: 1,
         // offset: 'l',
         title: false,
@@ -95,13 +95,13 @@ function subTOCar() {
     var count = $('#dishcount').val()
     var price = $('#dishprice').val()
     $.ajax({
-        url:'/addToCar',
-        data:{id:id,name:name,count:count,price:price},
-        method:'post',
-        success:function (res) {
-            if(res == 1){
+        url: '/addToCar',
+        data: {id: id, name: name, count: count, price: price},
+        method: 'post',
+        success: function (res) {
+            if (res == 1) {
                 layer.msg('添加成功')
-            }else{
+            } else {
                 layer.msg('添加失败')
             }
             layer.close(layerCount);
@@ -112,18 +112,14 @@ function subTOCar() {
 //删除购物车条目
 function delItemFromCar(ida) {
     $.ajax({
-        url: '/delItem',
-        data:{id:ida},
-        method: 'get',
-        success: function (res) {
-            if (res == 1) {
-                layer.msg('删除成功')
-                //重新DOM
-            } else {
-                layer.msg('删除成功')
-            }
+        url: 'delete',
+        data: {id: ida},
+        dataType: "text",
+        contentType: "application/json;charset=utf-8",
+        success: function () {
+            debugger
         },
-        error: function (res,text) {
+        error: function () {
             debugger
         }
     })

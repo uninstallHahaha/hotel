@@ -88,7 +88,7 @@ public class CarController {
     }
 
     @ResponseBody
-    @RequestMapping("/delItem")
+    @RequestMapping("/delete")
     public int delItem(
             HttpServletRequest request,
             HttpServletResponse response,
