@@ -86,4 +86,40 @@ public class CarController {
         response.addCookie(car_cookie);
         return 1;
     }
+
+    @ResponseBody
+    @RequestMapping("/delItem")
+    public int delItem(
+            HttpServletRequest request,
+            HttpServletResponse response,
+             String id){
+        Cookie[] cookies = request.getCookies();
+        Cookie car_cookie = null;
+        for (Cookie c :
+                cookies) {
+            if (c.getName().equals("CAR")) {
+                car_cookie = c;
+                break;
+            }
+        }
+        if(car_cookie == null) return 0;
+        String[] itmes = car_cookie.getValue().split("#");
+        int loc = -1;
+        for(int i=0;i<itmes.length;i++) {
+            if (itmes[i].startsWith("id:" + id)) {
+                loc = i;
+                break;
+            }
+        }
+        if(loc==-1) return 0;
+        String resStr = "";
+        for(int i=0;i<itmes.length;i++){
+            if(i!=loc) resStr+=itmes[i];
+        }
+        car_cookie.setValue(resStr);
+        car_cookie.setPath(request.getContextPath() + "/");
+        car_cookie.setMaxAge(7 * 24 * 60 * 60);
+        response.addCookie(car_cookie);
+        return 1;
+    }
 }

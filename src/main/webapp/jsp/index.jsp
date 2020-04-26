@@ -726,29 +726,12 @@
 <div id="cardiv" style="display: none">
     <table class="table-cart" style="width: 100%">
         <tbody id="carTbody">
-      <!--  <tr class="cartr">
-            <td class="title">
-                <span class="name">
-                    <a href="#productModal" data-toggle="modal">Pizza Chicked BBQ</a>
-                </span>
-            </td>
-            <td class="price">$9.82</td>
-            <td class="actions">
-                <a href="#productModal" data-toggle="modal" class="action-icon">
-                    <i class="layui-icon layui-icon-edit"></i>
-                </a>
-                <a href="#" class="action-icon">
-                    <i class="layui-icon layui-icon-close"></i>
-                </a>
-            </td>
-        </tr> -->
         </tbody>
     </table>
     <div class="pricePlace">总计 :
         <span class="priceNum" id="priceNum"> 100.86$</span>
     </div>
     <a href="/getCheckoutPage"><div class="carBtn"  id="carBtn">结算</div></a>
-
 </div>
 
 

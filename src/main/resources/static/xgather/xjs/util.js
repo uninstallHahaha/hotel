@@ -33,10 +33,12 @@ function initCarDOM() {
     var items = getItemsFormCookie()
     if (items == null) return
     var totalprice = 0
+    //清空
+    $('#carTbody').empty()
     //添加行
     items.forEach((item, index) => {
         var tDOM =
-            "<tr class=\"cartr\">\n" +
+            "<tr class=\"cartr\" id='"+item.id+"'>\n" +
             "                                <td class=\"title\">\n" +
             "                                <span class=\"name\">\n" +
             "                                    <a href=\"#productModal\" data-toggle=\"modal\"> " + item.name + "</a>\n" +
@@ -49,7 +51,7 @@ function initCarDOM() {
             "data-name='" + item.name + "' data-price='" + item.price + "' data-toggle=\"modal\" class=\"action-icon\">\n" +
             "                                        <i class=\"layui-icon layui-icon-edit\"></i>\n" +
             "                                    </a>\n" +
-            "                                    <a href=\"#\" class=\"action-icon\">\n" +
+            "                                    <a href=\"#\" class=\"action-icon\" onclick='delItemFromCar(\""+item.id+"\")'>\n" +
             "                                        <i class=\"layui-icon layui-icon-close\"></i>\n" +
             "                                    </a>\n" +
             "                                </td>\n" +
@@ -103,6 +105,26 @@ function subTOCar() {
                 layer.msg('添加失败')
             }
             layer.close(layerCount);
+        }
+    })
+}
+
+//删除购物车条目
+function delItemFromCar(ida) {
+    $.ajax({
+        url: '/delItem',
+        data:{id:ida},
+        method: 'get',
+        success: function (res) {
+            if (res == 1) {
+                layer.msg('删除成功')
+                //重新DOM
+            } else {
+                layer.msg('删除成功')
+            }
+        },
+        error: function (res,text) {
+            debugger
         }
     })
 }
