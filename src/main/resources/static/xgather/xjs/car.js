@@ -2,7 +2,9 @@ $(function () {
 
     //打开购物车
     $('#showCar').click(function () {
-
+        //加载购物车条目
+        initCarDOM()
+        //打开购物车
         layer.open({
             title: '购物车',
             type: 1,

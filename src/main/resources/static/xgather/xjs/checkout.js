@@ -11,7 +11,7 @@ $(function () {
         var username = $('#username').val()
         var userphone = $('#userphone').val()
         var beizhu = $('#beizhu').val()
-        if (username == "" || userphone == "" || beizhu == "") {
+        if (username == "" || userphone == "") {
             layer.msg('请完善信息')
             return
         }

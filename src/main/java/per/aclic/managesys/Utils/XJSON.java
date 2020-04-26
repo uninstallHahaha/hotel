@@ -12,7 +12,7 @@ public class XJSON {
         Method[] methods = type.getMethods();
         for (Method m :
                 methods) {
-            System.out.println(m.getName());
+//            System.out.println(m.getName());
         }
         //处理json
         String arrStr = json.substring(1, json.length() - 1);

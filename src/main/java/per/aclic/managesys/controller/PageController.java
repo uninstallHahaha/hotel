@@ -41,4 +41,10 @@ public class PageController {
         return "checkout";
     }
 
+
+
+    @RequestMapping("/getBillPage")
+    public String getBillPage(Model model) {
+        return "bills";
+    }
 }

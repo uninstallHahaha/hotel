@@ -193,6 +193,7 @@
 <div class="hide"></div>
 </body>
 
+<%--数量选择弹窗--%>
 <div id="selDishCount" style="display: none">
     <div class="imgwraper">
         <h4 class="wrapertitle">选择数量</h4>
@@ -215,7 +216,6 @@
                    class="layui-input">
         </div>
     </div>
-<%--    <button class="layui-btn" id="subTOCar">确定</button>--%>
     <div class="okbtn" id="subTOCar">确定</div>
 </div>
 
