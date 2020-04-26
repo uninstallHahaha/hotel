@@ -48,7 +48,7 @@ function initCarDOM() {
             "                                <td class=\"price\">$" + item.price * item.count + "</td>\n" +
             "                                <td class=\"actions\">\n" +
             "                                    <a href='#' onclick='showCountModal(this)' data-id='" + item.id + "'" +
-            "data-name='" + item.name + "' data-price='" + item.price + "' data-toggle=\"modal\" class=\"action-icon\">\n" +
+            "data-name='" + item.name + "' data-price='" + item.price + "' data-count='"+item.count+"' data-toggle=\"modal\" class=\"action-icon\">\n" +
             "                                        <i class=\"layui-icon layui-icon-edit\"></i>\n" +
             "                                    </a>\n" +
             "                                    <a href=\"#\" class=\"action-icon\" onclick='delItemFromCar(\"" + item.id + "\")'>\n" +  //<a href=\"#\" class=\"action-icon\" onclick='delItemFromCar(\""+item.id+"\")'>
@@ -65,7 +65,7 @@ function initCarDOM() {
 
 var layerCount;
 
-//显示数量修改modal
+//点击购物车中的编辑按钮后弹出修改数量的modal
 function showCountModal(the) {
     //修改count弹窗信息
     $('#c-dishname').text($(the).attr('data-name'))
@@ -74,6 +74,8 @@ function showCountModal(the) {
     $('#dishname').val($(the).attr('data-name'))
     $('#dishname').val($(the).attr('data-name'))
     $('#dishprice').val($(the).attr('data-price'))
+    $('#dishcount').val($(the).attr('data-count'))
+    $('#subType').val("2")  //1:提交为新增 , 2:提交为修改
     //弹窗
     layerCount = layer.open({
         type: 1,
@@ -88,15 +90,16 @@ function showCountModal(the) {
     });
 }
 
-//提交到购物车
+//提交到购物车cookie
 function subTOCar() {
     var id = $('#dishid').val()
     var name = $('#dishname').val()
     var count = $('#dishcount').val()
     var price = $('#dishprice').val()
+    var subType = $('#subType').val()
     $.ajax({
         url: '/addToCar',
-        data: {id: id, name: name, count: count, price: price},
+        data: {id: id, name: name, count: count, price: price, subType:subType},
         method: 'post',
         success: function (res) {
             if (res == 1) {
@@ -114,13 +117,14 @@ function delItemFromCar(ida) {
     $.ajax({
         url: 'delete',
         data: {id: ida},
-        dataType: "text",
-        contentType: "application/json;charset=utf-8",
-        success: function () {
-            debugger
-        },
-        error: function () {
-            debugger
+        success: function (res) {
+            if(res == 1){
+                layer.msg('删除成功')
+                //重新加载购物车
+                initCarDOM()
+            }else{
+                layer.msg('删除失败')
+            }
         }
     })
 }

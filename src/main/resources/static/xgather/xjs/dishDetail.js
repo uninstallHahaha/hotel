@@ -1,12 +1,11 @@
-function noNagtive(e)
-{
-    if($(e).val()<=0){
+function noNagtive(e) {
+    if ($(e).val() <= 0) {
         $(e).val(1)
     }
 }
 
 
-$(function(){
+$(function () {
 
     //选择数量层对象
     var layerCount;
@@ -22,7 +21,7 @@ $(function(){
             shadeClose: true,
             shade: 0.4,
             content: $('#selDishCount')
-    });
+        });
     })
 
     //添加到购物车
@@ -32,13 +31,13 @@ $(function(){
         var count = $('#dishcount').val()
         var price = $('#dishprice').val()
         $.ajax({
-            url:'/addToCar',
-            data:{id:id,name:name,count:count,price:price},
-            method:'post',
-            success:function (res) {
-                if(res == 1){
+            url: '/addToCar',
+            data: {id: id, name: name, count: count, price: price},
+            method: 'post',
+            success: function (res) {
+                if (res == 1) {
                     parent.layer.msg('添加成功')
-                }else{
+                } else {
                     parent.layer.msg('添加失败')
                 }
                 layer.close(layerCount);

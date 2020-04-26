@@ -21,7 +21,14 @@ public class CarController {
                         String id,
                         String name,
                         int count,
-                        int price) {
+                        int price,
+                        String subType) {
+        if(subType.equals("1")){
+            //TODO 新增记录
+        }else if(subType.equals("2")){
+            //TODO 修改记录
+        }
+
         Cookie[] cookies = request.getCookies();
         Cookie car_cookie = null;
         for (Cookie c :
