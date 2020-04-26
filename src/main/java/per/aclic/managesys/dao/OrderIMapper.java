@@ -1,0 +1,32 @@
+package per.aclic.managesys.dao;
+
+import java.util.List;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+import per.aclic.managesys.model.OrderI;
+import per.aclic.managesys.model.OrderIExample;
+
+@Repository
+public interface OrderIMapper {
+    long countByExample(OrderIExample example);
+
+    int deleteByExample(OrderIExample example);
+
+    int deleteByPrimaryKey(String id);
+
+    int insert(OrderI record);
+
+    int insertSelective(OrderI record);
+
+    List<OrderI> selectByExample(OrderIExample example);
+
+    OrderI selectByPrimaryKey(String id);
+
+    int updateByExampleSelective(@Param("record") OrderI record, @Param("example") OrderIExample example);
+
+    int updateByExample(@Param("record") OrderI record, @Param("example") OrderIExample example);
+
+    int updateByPrimaryKeySelective(OrderI record);
+
+    int updateByPrimaryKey(OrderI record);
+}

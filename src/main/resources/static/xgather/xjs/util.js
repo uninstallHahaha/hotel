@@ -27,3 +27,35 @@ function getItemsFormCookie(){
         }
     }
 }
+
+//初始化购物车dom
+function initCarDOM(){
+    var items = getItemsFormCookie()
+    if(items==null) return
+    var totalprice = 0
+    //添加行
+    items.forEach((item,index)=>{
+        var tDOM =
+            "<tr class=\"cartr\">\n" +
+            "                                <td class=\"title\">\n" +
+            "                                <span class=\"name\">\n" +
+            "                                    <a href=\"#productModal\" data-toggle=\"modal\"> "+item.name+"</a>\n" +
+            "                                </span>\n" +
+            "                                </td>\n" +
+            "                                <td class=\"count\">x"+item.count+"</td>\n" +
+            "                                <td class=\"price\">$"+item.price*item.count+"</td>\n" +
+            "                                <td class=\"actions\">\n" +
+            "                                    <a href=\"#productModal\" data-toggle=\"modal\" class=\"action-icon\">\n" +
+            "                                        <i class=\"layui-icon layui-icon-edit\"></i>\n" +
+            "                                    </a>\n" +
+            "                                    <a href=\"#\" class=\"action-icon\">\n" +
+            "                                        <i class=\"layui-icon layui-icon-close\"></i>\n" +
+            "                                    </a>\n" +
+            "                                </td>\n" +
+            "                            </tr>"
+        $('#carTbody').append(tDOM)
+        totalprice+=parseInt(item.price*item.count)
+    })
+    //修改总计
+    $('#priceNum').text(totalprice+'$')
+}

@@ -44,3 +44,22 @@ body{
     font-size: 14px;
     float: right;
 }
+
+.beizhu{
+    background: #212121 !important;
+    border: 0px !important;
+    border-bottom: 1px solid #545454 !important;
+    color: #fff !important;
+}
+
+.header{
+    padding-bottom: 0px !important;
+}
+
+.priceNum{
+    color: #fff;
+}
+
+.pricePlace{
+    border-top: 0px !important;
+}

@@ -20,7 +20,8 @@ public class CarController {
                         HttpServletResponse response,
                         String id,
                         String name,
-                        int count) {
+                        int count,
+                        int price) {
         Cookie[] cookies = request.getCookies();
         Cookie car_cookie = null;
         for (Cookie c :
@@ -34,6 +35,7 @@ public class CarController {
             car_cookie = new Cookie("CAR", "");
             car_cookie.setValue("id:" + id + "@" +
                     "name:" + name + "@" +
+                    "price:" + price + "@" +
                     "count:" + count + "#");
         } else {
             String car_cookieValue = car_cookie.getValue();
@@ -60,6 +62,7 @@ public class CarController {
                 //该条目不存在, 新加
                 res = car_cookie.getValue() + "id:" + id + "@" +
                         "name:" + name + "@" +
+                        "price:" + price + "@" +
                         "count:" + count + "#";
             } else {
                 //该条目已存在, 追加

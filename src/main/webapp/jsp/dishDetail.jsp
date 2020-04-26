@@ -203,6 +203,7 @@
     </div>
     <input value="${dishInfo.id}" id="dishid" style="display: none">
     <input value="${dishInfo.name}" id="dishname" style="display: none">
+    <input value="${dishInfo.price}" id="dishprice" style="display: none">
 
     <div class="layui-form-item" style="position: relative;top: 70px;">
         <label class="layui-form-label">数量: </label>

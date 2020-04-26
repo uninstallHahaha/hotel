@@ -65,9 +65,9 @@
 <!--        <table tableName="proj" domainObjectName="Proj"></table>-->
 <!--        <table tableName="user" domainObjectName="User"></table>-->
 
-        <table tableName="dish" domainObjectName="Dish"></table>
-<!--        <table tableName="order" domainObjectName="Order"></table>-->
+<!--        <table tableName="dish" domainObjectName="Dish"></table>-->
+        <table tableName="orderi" domainObjectName="OrderI"></table>
 <!--        <table tableName="service" domainObjectName="Service"></table>-->
-        <table tableName="wine" domainObjectName="Wine"></table>
+<!--        <table tableName="wine" domainObjectName="Wine"></table>-->
     </context>
 </generatorConfiguration>

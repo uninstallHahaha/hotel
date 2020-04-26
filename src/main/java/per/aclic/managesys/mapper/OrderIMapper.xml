@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="per.aclic.managesys.dao.OrderMapper">
-  <resultMap id="BaseResultMap" type="per.aclic.managesys.model.Order">
+<mapper namespace="per.aclic.managesys.dao.OrderIMapper">
+  <resultMap id="BaseResultMap" type="per.aclic.managesys.model.OrderI">
     <id column="id" jdbcType="VARCHAR" property="id" />
     <result column="oid" jdbcType="VARCHAR" property="oid" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="userphone" jdbcType="VARCHAR" property="userphone" />
     <result column="itemid" jdbcType="VARCHAR" property="itemid" />
     <result column="itemname" jdbcType="VARCHAR" property="itemname" />
-    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="price" jdbcType="INTEGER" property="price" />
     <result column="count" jdbcType="INTEGER" property="count" />
     <result column="room" jdbcType="VARCHAR" property="room" />
+    <result column="beizhu" jdbcType="VARCHAR" property="beizhu" />
     <result column="ctime" jdbcType="TIMESTAMP" property="ctime" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -70,15 +73,15 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, oid, itemid, itemname, type, count, room, ctime
+    id, oid, username, userphone, itemid, itemname, price, count, room, beizhu, ctime
   </sql>
-  <select id="selectByExample" parameterType="per.aclic.managesys.model.OrderExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="per.aclic.managesys.model.OrderIExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from order
+    from orderi
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -89,29 +92,33 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from order
+    from orderi
     where id = #{id,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
-    delete from order
+    delete from orderi
     where id = #{id,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="per.aclic.managesys.model.OrderExample">
-    delete from order
+  <delete id="deleteByExample" parameterType="per.aclic.managesys.model.OrderIExample">
+    delete from orderi
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="per.aclic.managesys.model.Order">
-    insert into order (id, oid, itemid, 
-      itemname, type, count, 
-      room, ctime)
-    values (#{id,jdbcType=VARCHAR}, #{oid,jdbcType=VARCHAR}, #{itemid,jdbcType=VARCHAR}, 
-      #{itemname,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, #{count,jdbcType=INTEGER}, 
-      #{room,jdbcType=VARCHAR}, #{ctime,jdbcType=TIMESTAMP})
+
+  <insert id="insert" parameterType="per.aclic.managesys.model.OrderI">
+    insert into orderi (id, oid, username, 
+      userphone, itemid, itemname, 
+      price, count, room, 
+      beizhu, ctime)
+    values (#{id,jdbcType=VARCHAR}, #{oid,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, 
+      #{userphone,jdbcType=VARCHAR}, #{itemid,jdbcType=VARCHAR}, #{itemname,jdbcType=VARCHAR}, 
+      #{price,jdbcType=INTEGER}, #{count,jdbcType=INTEGER}, #{room,jdbcType=VARCHAR}, 
+      #{beizhu,jdbcType=VARCHAR}, #{ctime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="per.aclic.managesys.model.Order">
-    insert into order
+
+  <insert id="insertSelective" parameterType="per.aclic.managesys.model.OrderI">
+    insert into orderi
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
@@ -119,20 +126,29 @@
       <if test="oid != null">
         oid,
       </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="userphone != null">
+        userphone,
+      </if>
       <if test="itemid != null">
         itemid,
       </if>
       <if test="itemname != null">
         itemname,
       </if>
-      <if test="type != null">
-        type,
+      <if test="price != null">
+        price,
       </if>
       <if test="count != null">
         count,
       </if>
       <if test="room != null">
         room,
+      </if>
+      <if test="beizhu != null">
+        beizhu,
       </if>
       <if test="ctime != null">
         ctime,
@@ -145,14 +161,20 @@
       <if test="oid != null">
         #{oid,jdbcType=VARCHAR},
       </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="userphone != null">
+        #{userphone,jdbcType=VARCHAR},
+      </if>
       <if test="itemid != null">
         #{itemid,jdbcType=VARCHAR},
       </if>
       <if test="itemname != null">
         #{itemname,jdbcType=VARCHAR},
       </if>
-      <if test="type != null">
-        #{type,jdbcType=INTEGER},
+      <if test="price != null">
+        #{price,jdbcType=INTEGER},
       </if>
       <if test="count != null">
         #{count,jdbcType=INTEGER},
@@ -160,19 +182,22 @@
       <if test="room != null">
         #{room,jdbcType=VARCHAR},
       </if>
+      <if test="beizhu != null">
+        #{beizhu,jdbcType=VARCHAR},
+      </if>
       <if test="ctime != null">
         #{ctime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="per.aclic.managesys.model.OrderExample" resultType="java.lang.Long">
-    select count(*) from order
+  <select id="countByExample" parameterType="per.aclic.managesys.model.OrderIExample" resultType="java.lang.Long">
+    select count(*) from orderi
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update order
+    update orderi
     <set>
       <if test="record.id != null">
         id = #{record.id,jdbcType=VARCHAR},
@@ -180,20 +205,29 @@
       <if test="record.oid != null">
         oid = #{record.oid,jdbcType=VARCHAR},
       </if>
+      <if test="record.username != null">
+        username = #{record.username,jdbcType=VARCHAR},
+      </if>
+      <if test="record.userphone != null">
+        userphone = #{record.userphone,jdbcType=VARCHAR},
+      </if>
       <if test="record.itemid != null">
         itemid = #{record.itemid,jdbcType=VARCHAR},
       </if>
       <if test="record.itemname != null">
         itemname = #{record.itemname,jdbcType=VARCHAR},
       </if>
-      <if test="record.type != null">
-        type = #{record.type,jdbcType=INTEGER},
+      <if test="record.price != null">
+        price = #{record.price,jdbcType=INTEGER},
       </if>
       <if test="record.count != null">
         count = #{record.count,jdbcType=INTEGER},
       </if>
       <if test="record.room != null">
         room = #{record.room,jdbcType=VARCHAR},
+      </if>
+      <if test="record.beizhu != null">
+        beizhu = #{record.beizhu,jdbcType=VARCHAR},
       </if>
       <if test="record.ctime != null">
         ctime = #{record.ctime,jdbcType=TIMESTAMP},
@@ -204,24 +238,33 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update order
+    update orderi
     set id = #{record.id,jdbcType=VARCHAR},
       oid = #{record.oid,jdbcType=VARCHAR},
+      username = #{record.username,jdbcType=VARCHAR},
+      userphone = #{record.userphone,jdbcType=VARCHAR},
       itemid = #{record.itemid,jdbcType=VARCHAR},
       itemname = #{record.itemname,jdbcType=VARCHAR},
-      type = #{record.type,jdbcType=INTEGER},
+      price = #{record.price,jdbcType=INTEGER},
       count = #{record.count,jdbcType=INTEGER},
       room = #{record.room,jdbcType=VARCHAR},
+      beizhu = #{record.beizhu,jdbcType=VARCHAR},
       ctime = #{record.ctime,jdbcType=TIMESTAMP}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="per.aclic.managesys.model.Order">
-    update order
+  <update id="updateByPrimaryKeySelective" parameterType="per.aclic.managesys.model.OrderI">
+    update orderi
     <set>
       <if test="oid != null">
         oid = #{oid,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="userphone != null">
+        userphone = #{userphone,jdbcType=VARCHAR},
       </if>
       <if test="itemid != null">
         itemid = #{itemid,jdbcType=VARCHAR},
@@ -229,8 +272,8 @@
       <if test="itemname != null">
         itemname = #{itemname,jdbcType=VARCHAR},
       </if>
-      <if test="type != null">
-        type = #{type,jdbcType=INTEGER},
+      <if test="price != null">
+        price = #{price,jdbcType=INTEGER},
       </if>
       <if test="count != null">
         count = #{count,jdbcType=INTEGER},
@@ -238,20 +281,26 @@
       <if test="room != null">
         room = #{room,jdbcType=VARCHAR},
       </if>
+      <if test="beizhu != null">
+        beizhu = #{beizhu,jdbcType=VARCHAR},
+      </if>
       <if test="ctime != null">
         ctime = #{ctime,jdbcType=TIMESTAMP},
       </if>
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="per.aclic.managesys.model.Order">
-    update order
+  <update id="updateByPrimaryKey" parameterType="per.aclic.managesys.model.OrderI">
+    update orderi
     set oid = #{oid,jdbcType=VARCHAR},
+      username = #{username,jdbcType=VARCHAR},
+      userphone = #{userphone,jdbcType=VARCHAR},
       itemid = #{itemid,jdbcType=VARCHAR},
       itemname = #{itemname,jdbcType=VARCHAR},
-      type = #{type,jdbcType=INTEGER},
+      price = #{price,jdbcType=INTEGER},
       count = #{count,jdbcType=INTEGER},
       room = #{room,jdbcType=VARCHAR},
+      beizhu = #{beizhu,jdbcType=VARCHAR},
       ctime = #{ctime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=VARCHAR}
   </update>

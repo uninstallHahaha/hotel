@@ -131,44 +131,52 @@
                                 <div class="layui-form-item">
                                     <label class="layui-form-label">您的名字</label>
                                     <div class="layui-input-block">
-                                        <input type="text" name="title" required lay-verify="required"
-                                               placeholder="请输入标题" autocomplete="off" class="layui-input">
+                                        <input type="text" id="username"
+                                               value="alice"
+                                               required lay-verify="required"
+                                               placeholder="请输入名字" autocomplete="off" class="layui-input">
                                     </div>
                                 </div>
                                 <div class="layui-form-item">
                                     <label class="layui-form-label">您的手机号</label>
                                     <div class="layui-input-block">
-                                        <input type="text" name="title" required lay-verify="required"
-                                               placeholder="请输入标题" autocomplete="off" class="layui-input">
+                                        <input type="text" id="userphone"
+                                               value="1322311231"
+                                               required lay-verify="required|phone|number"
+                                               placeholder="请输入手机号" autocomplete="off" class="layui-input">
                                     </div>
                                 </div>
                                 <div class="layui-form-item">
                                     <label class="layui-form-label">付款方式</label>
                                     <div class="layui-input-block">
-                                        <input type="radio" name="sex" value="1" title="货到付款">
+                                        <select name="interest" lay-filter="aihao">
+                                            <option value="0">货到付款</option>
+                                            <option value="1">货到付款</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="layui-form-item layui-form-text">
                                     <label class="layui-form-label">备注</label>
                                     <div class="layui-input-block">
-                                        <textarea name="desc" placeholder="请输入备注" class="layui-textarea"></textarea>
+                                        <textarea id="beizhu"
+                                                  placeholder="请输入备注" class="layui-textarea beizhu"></textarea>
                                     </div>
                                 </div>
-
                             </form>
                         </div>
-                        <div class="checkoutBtn">结算</div>
+                        <div class="checkoutBtn" id="checkoutBtn">结算</div>
                     </div>
                     <div class="orderinfo">
                         <div class="ordertitle">您的账单</div>
                         <table class="table-cart" style="width: 100%">
-                            <tbody>
-                            <tr class="cartr">
+                            <tbody id="carTbody">
+                        <!--    <tr class="cartr">
                                 <td class="title">
-                <span class="name">
-                    <a href="#productModal" data-toggle="modal">Pizza Chicked BBQ</a>
-                </span>
+                                <span class="name">
+                                    <a href="#productModal" data-toggle="modal">Pizza Chicked BBQ</a>
+                                </span>
                                 </td>
+                                <td class="count">x2</td>
                                 <td class="price">$9.82</td>
                                 <td class="actions">
                                     <a href="#productModal" data-toggle="modal" class="action-icon">
@@ -178,11 +186,11 @@
                                         <i class="layui-icon layui-icon-close"></i>
                                     </a>
                                 </td>
-                            </tr>
+                            </tr> -->
                             </tbody>
                         </table>
                         <div class="pricePlace">总计 :
-                            <span class="priceNum"> 100.86$</span>
+                            <span class="priceNum" id="priceNum"> 100.86$</span>
                         </div>
                     </div>
                 </div>
@@ -193,7 +201,7 @@
         </div>
     </div>
 </div>
-<div id="footer"><p>COPYRIGHT (©) 2016 创客云版权所有</p></div>
+<div id="footer"><p>COPYRIGHT (©) 2020 Aclic Studio</p></div>
 
 <div id="shares"><a id="sshare"><i class="fa fa-share-alt"></i></a><a
         href="javascript:if(confirm('http://service.weibo.com/share/share.php?appkey=3206975293&  \n\n���ļ�δ�� Teleport Pro ���أ���Ϊ ��λ����ʼ��ַ�����õı߽���������·���С�  \n\n����Ҫ�ӷ�����������?'))window.location='http://service.weibo.com/share/share.php?appkey=3206975293&'"
@@ -223,9 +231,12 @@
 <link rel="stylesheet" type="text/css" href="/xgather/xcss/car.css">
 <link rel="stylesheet" type="text/css" href="/xgather/xcss/checkout.css">
 <link rel="stylesheet" type="text/css" href="/xgather/xlib/layui-v2.5.6/layui/css/layui.css">
+<script src="/xgather/xlib/jquery.min.js"></script>
 <script src="/xgather/xlib/layer/layer.js"></script>
+<script src="/xgather/xlib/layui-v2.5.6/layui/layui.all.js"></script>
 <script src="/xgather/xjs/car.js"></script>
 <script src="/xgather/xjs/util.js"></script>
+<script src="/xgather/xjs/checkout.js"></script>
 
 
 </html>

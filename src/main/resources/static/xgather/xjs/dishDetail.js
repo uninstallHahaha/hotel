@@ -30,9 +30,10 @@ $(function(){
         var id = $('#dishid').val()
         var name = $('#dishname').val()
         var count = $('#dishcount').val()
+        var price = $('#dishprice').val()
         $.ajax({
             url:'/addToCar',
-            data:{id:id,name:name,count:count},
+            data:{id:id,name:name,count:count,price:price},
             method:'post',
             success:function (res) {
                 if(res == 1){

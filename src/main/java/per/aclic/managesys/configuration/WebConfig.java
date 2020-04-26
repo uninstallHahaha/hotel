@@ -2,9 +2,12 @@ package per.aclic.managesys.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import per.aclic.managesys.interceptor.LogInterceptor;
+
+import java.util.List;
 
 @Configuration
 public class WebConfig extends WebMvcConfigurerAdapter{
@@ -27,4 +30,6 @@ public class WebConfig extends WebMvcConfigurerAdapter{
 //        registry.addInterceptor(interceptor)
 //                .addPathPatterns(addPathPattents).excludePathPatterns(excludePathPattents);
     }
+
+
 }
