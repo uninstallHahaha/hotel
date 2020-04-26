@@ -21,4 +21,8 @@ public class OrderService {
     public List<OrderI> finAll(){
         return orderMapper.selectByExample(new OrderIExample());
     }
+
+    public List<OrderI> findAll() {
+        return orderMapper.selectByExample(new OrderIExample());
+    }
 }

@@ -110,8 +110,8 @@
         </div>
         <div class="content">
             <div class="header">
-                <p class="title">新闻</p>
-                <p class="subtitle">news</p>
+                <p class="title">账单</p>
+                <p class="subtitle">Bills</p>
             </div>
             <div id="category">
                 <a href="index.htm" tppabs="http://dede24.va666.com/a/guanyu/xinwen/" /a/caipin/" class='active' >全部</a>
@@ -121,89 +121,37 @@
             </div>
             <div id="newslist">
                 <div class="wrapper">
-                    <div id="newsitem_0" class="wow newstitem left"><a class="newscontent" target="_blank"
-                                                                       href="gongsixinwen/22.html"
-                                                                       tppabs="http://dede24.va666.com/a/guanyu/xinwen/gongsixinwen/22.html">
-                        <div class="news_wrapper">
-                            <div class="newsbody">
-                                <p class="date"><span class="md">2016<span>-</span></span><span
-                                        class="year">09-18</span></p>
-                                <p class="title">理想的下午，在家喝出女王范儿</p>
-                                <div class="separator"></div>
-                                <p class="description">
-                                    合理的饮食，是身体健康的第一要素抵挡冬日的严寒一个人的餐桌，也可以有更其实除了各种游乐设施，既体现迪士尼童话主题，又入乡随......</p>
-                            </div>
+
+                    <c:forEach var="b" items="${bills}">
+
+                        <div id="newsitem_0" class="wow newstitem left">
+                            <a class="newscontent" target="_blank" href="gongsixinwen/22.html">
+                                <div class="news_wrapper">
+                                    <div class="newsbody">
+                                        <p class="date">
+                                            <span class="md" style="width: 200px;">${b.ctime}
+<%--                                                <span>-</span>--%>
+                                            </span>
+<%--                                            <span class="year">09-18</span></p>--%>
+                                        <p class="title">总价: ${b.totalPrice}$</p>
+                                        <div class="separator"></div>
+                                        <p class="description">
+                                            合理的饮食，是身体健康的第一要素抵挡冬日的严寒一个人的餐桌，也可以有更其实除了各种游乐设施，既体现迪士尼童话主题，又入乡随......</p>
+                                    </div>
+                                </div>
+                                <div class="newsimg"
+                                     style="background-image:url(/uploads/allimg/160916/bills<%=(int)(Math.floor(Math.random()*10)+1)%>.jpg)"></div>
+                            </a>
+                            <a href="gongsixinwen/22.html"
+                               class="details">more<i class="fa fa-angle-right"></i></a>
                         </div>
-                        <div class="newsimg"
-                             style="background-image:url(/uploads/allimg/160916/1-1609161639520-L.jpg)"></div>
-                    </a>
-                        <a href="gongsixinwen/22.html"
-                           tppabs="http://dede24.va666.com/a/guanyu/xinwen/gongsixinwen/22.html" target="_blank"
-                           class="details">more<i class="fa fa-angle-right"></i></a>
-                    </div>
-                    <div id="newsitem_1" class="wow newstitem left"><a class="newscontent" target="_blank"
-                                                                       href="xingyexinwen/25.html"
-                                                                       tppabs="http://dede24.va666.com/a/guanyu/xinwen/xingyexinwen/25.html">
-                        <div class="news_wrapper">
-                            <div class="newsbody">
-                                <p class="date"><span class="md">2016<span>-</span></span><span
-                                        class="year">09-18</span></p>
-                                <p class="title">食物有超乎想象的治愈力量，它能填饱肚子</p>
-                                <div class="separator"></div>
-                                <p class="description">除了面包和泡面之外，一个人的餐桌，也可以有更多选择一个人的生活除了面包和泡面之外，一个人的餐桌 ... .........</p>
-                            </div>
-                        </div>
-                        <div class="newsimg"
-                             style="background-image:url(/uploads/allimg/160916/1-1609161K4510-L.jpg)"></div>
-                    </a>
-                        <a href="xingyexinwen/25.html"
-                           tppabs="http://dede24.va666.com/a/guanyu/xinwen/xingyexinwen/25.html" target="_blank"
-                           class="details">more<i class="fa fa-angle-right"></i></a>
-                    </div>
-                    <div id="newsitem_2" class="wow newstitem left"><a class="newscontent" target="_blank"
-                                                                       href="gongsixinwen/23.html"
-                                                                       tppabs="http://dede24.va666.com/a/guanyu/xinwen/gongsixinwen/23.html">
-                        <div class="news_wrapper">
-                            <div class="newsbody">
-                                <p class="date"><span class="md">2016<span>-</span></span><span
-                                        class="year">09-17</span></p>
-                                <p class="title">菊苣烤龙虾配照烧鹅肝和时令蔬菜</p>
-                                <div class="separator"></div>
-                                <p class="description">合理的饮食，是身体健康的第一要素抵挡冬日的严寒一个人的餐桌，也可以有更 ............</p>
-                            </div>
-                        </div>
-                        <div class="newsimg"
-                             style="background-image:url(/uploads/allimg/160916/1-1609161K2340-L.jpg)"></div>
-                    </a>
-                        <a href="gongsixinwen/23.html"
-                           tppabs="http://dede24.va666.com/a/guanyu/xinwen/gongsixinwen/23.html" target="_blank"
-                           class="details">more<i class="fa fa-angle-right"></i></a>
-                    </div>
-                    <div id="newsitem_3" class="wow newstitem left"><a class="newscontent" target="_blank"
-                                                                       href="xingyexinwen/24.html"
-                                                                       tppabs="http://dede24.va666.com/a/guanyu/xinwen/xingyexinwen/24.html">
-                        <div class="news_wrapper">
-                            <div class="newsbody">
-                                <p class="date"><span class="md">2016<span>-</span></span><span
-                                        class="year">09-17</span></p>
-                                <p class="title">西餐礼仪细节，让你成为完美淑女</p>
-                                <div class="separator"></div>
-                                <p class="description">>除了面包和泡面之外，一个人的餐桌，也可以有更多选择一个人的生活 ............</p>
-                            </div>
-                        </div>
-                        <div class="newsimg"
-                             style="background-image:url(/uploads/allimg/160916/1-1609161K3300-L.jpg)"></div>
-                    </a>
-                        <a href="xingyexinwen/24.html"
-                           tppabs="http://dede24.va666.com/a/guanyu/xinwen/xingyexinwen/24.html" target="_blank"
-                           class="details">more<i class="fa fa-angle-right"></i></a>
-                    </div>
+
+                    </c:forEach>
+
                 </div>
             </div>
             <div class="clear"></div>
-            <div id="pages"><span class="thisclass">1</span>
-                <a href="list_5_2.html" tppabs="http://dede24.va666.com/a/guanyu/xinwen/list_5_2.html">2</a>
-                <a href="list_5_2.html" tppabs="http://dede24.va666.com/a/guanyu/xinwen/list_5_2.html">></a>
+            <div id="pages">
             </div>
         </div>
     </div>
