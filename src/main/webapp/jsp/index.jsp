@@ -153,18 +153,13 @@
                 </ul>
             </li>
 
-            <li class="navitem"><a class='' href="a/caipin/index.htm" tppabs="http://dede24.va666.com/a/caipin/">酒水
-                <!--
-                <i class='fa fa-angle-down'></i>
-                -->
+            <li class="navitem"><a class='' href="/getWineList/0">酒水
             </a>
                 <ul class="subnav">
-                    <li><a href="a/caipin/toupan/index.htm" tppabs="http://dede24.va666.com/a/caipin/toupan">头盘</a></li>
-                    <li><a href="a/caipin/liangtang/index.htm"
-                           tppabs="http://dede24.va666.com/a/caipin/liangtang">靓汤</a></li>
-                    <li><a href="a/caipin/fucai/index.htm" tppabs="http://dede24.va666.com/a/caipin/fucai">副菜</a></li>
-                    <li><a href="a/caipin/zhucai/index.htm" tppabs="http://dede24.va666.com/a/caipin/zhucai">主菜</a></li>
-                    <li><a href="a/caipin/shuguo/index.htm" tppabs="http://dede24.va666.com/a/caipin/shuguo">蔬果</a></li>
+                    <li><a href="/getWineList/1">餐前酒</a></li>
+                    <li><a href="/getWineList/2">佐餐酒</a></li>
+                    <li><a href="/getWineList/3">餐后酒</a></li>
+                    <li><a href="/getWineList/4">饮料</a></li>
                 </ul>
             </li>
 
@@ -708,7 +703,7 @@
     </div>
 </div>
 </div>
-<div id="footer"><p>COPYRIGHT (©) 2016 创客云版权所有</p> </div>
+<div id="footer"><p>COPYRIGHT (©) 2016 创客云版权所有</p></div>
 
 <div id="shares"><a id="sshare"><i class="fa fa-share-alt"></i></a><a
         href="javascript:if(confirm('http://service.weibo.com/share/share.php?appkey=3206975293&  \n\n���ļ�δ�� Teleport Pro ���أ���Ϊ ��λ����ʼ��ַ�����õı߽���������·���С�  \n\n����Ҫ�ӷ�����������?'))window.location='http://service.weibo.com/share/share.php?appkey=3206975293&'"
@@ -734,7 +729,9 @@
     <div class="pricePlace">总计 :
         <span class="priceNum" id="priceNum"> 100.86$</span>
     </div>
-    <a href="/getCheckoutPage"><div class="carBtn"  id="carBtn">结算</div></a>
+    <a href="/getCheckoutPage">
+        <div class="carBtn" id="carBtn">结算</div>
+    </a>
 </div>
 
 

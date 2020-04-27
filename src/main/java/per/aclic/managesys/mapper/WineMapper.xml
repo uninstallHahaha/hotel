@@ -71,6 +71,8 @@
   <sql id="Base_Column_List">
     id, name, sdetail, detail, price, type, pic
   </sql>
+
+
   <select id="selectByExample" parameterType="per.aclic.managesys.model.WineExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
@@ -85,12 +87,32 @@
       order by ${orderByClause}
     </if>
   </select>
+
+
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from wine
     where id = #{id,jdbcType=VARCHAR}
   </select>
+
+
+  <select id="selectTopWine" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    *
+    from wine
+    limit 10
+  </select>
+
+
+  <select id="selectByType" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    *
+    from wine
+    where type=#{type}
+  </select>
+
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from wine
     where id = #{id,jdbcType=VARCHAR}
