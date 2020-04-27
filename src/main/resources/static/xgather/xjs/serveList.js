@@ -20,3 +20,22 @@ function triggle(t) {
     return
 
 }
+
+
+function delServe(id) {
+        layer.confirm('是否删除?',function () {
+            $.ajax({
+                url: '/delServe',
+                data: {id: id},
+                method: 'post',
+                success: function (res) {
+                    if (res == 1) {
+                        layer.msg('服务记录删除成功')
+                        $('#record'+id).remove()
+                    } else {
+                        layer.msg('服务记录删除失败')
+                    }
+                }
+            })
+        })
+}

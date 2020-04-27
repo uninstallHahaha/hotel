@@ -125,8 +125,8 @@
 
                     <c:forEach var="b" items="${bills}">
 
-                        <div id="newsitem_0" class="wow newstitem left" data-type=${b.type}>
-                            <a class="newscontent" target="_blank" href="gongsixinwen/22.html">
+                        <div id="record${b.id}" class="wow newstitem left" data-type=${b.type}>
+                            <a class="newscontent" href="javaScript:void()" onclick="delServe('${b.id}')">
                                 <div class="news_wrapper">
                                     <div class="newsbody">
                                         <p class="date">
@@ -143,8 +143,8 @@
                                 <div class="newsimg"
                                      style="background-image:url(/uploads/allimg/160916/bills<%=(int)(Math.floor(Math.random()*10)+1)%>.jpg)"></div>
                             </a>
-                            <a href="gongsixinwen/22.html"
-                               class="details">more<i class="fa fa-angle-right"></i></a>
+                            <a href="javascript:void();"
+                               class="details" onclick="delServe('${b.id}')">删除<i class="fa fa-angle-right"></i></a>
                         </div>
 
                     </c:forEach>
@@ -182,6 +182,9 @@
 </div>
 <div class="hide"></div>
 </body>
+
+<script src="/xgather/xlib/jquery.min.js"></script>
+<script src="/xgather/xlib/layer/layer.js"></script>
 
 <script src="/xgather/xjs/serveList.js"></script>
 

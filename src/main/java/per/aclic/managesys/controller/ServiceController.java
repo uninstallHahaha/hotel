@@ -22,6 +22,20 @@ public class ServiceController {
     @Autowired
     ServiceService serviceService;
 
+
+
+    //删除服务
+    @ResponseBody
+    @RequestMapping("/delServe")
+    public int delServe(
+            HttpServletRequest request,
+            HttpServletResponse response,
+            String id) {
+        return serviceService.delServe(id);
+    }
+
+
+
     //提交呼叫的服务
     @ResponseBody
     @RequestMapping("/subServiceCall")

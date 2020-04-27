@@ -28,4 +28,9 @@ public class ServiceService {
     public int modServeState(String serveId, int state) {
         return serveMapper.modState(serveId,state);
     }
+
+    public int delServe(String id) {
+
+        return  serveMapper.deleteByPrimaryKey(id);
+    }
 }
