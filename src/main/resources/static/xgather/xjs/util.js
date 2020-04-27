@@ -5,8 +5,8 @@ function noNagtive(e) {
 }
 
 
+//从 cookie 中解出购物车数据
 function getItemsFormCookie() {
-    //从 cookie 中解出购物车数据
     var arrCookie = document.cookie.split(';')
     for (var i = 0; i < arrCookie.length; i++) {
         var arr = arrCookie[i].trim().split('=')
@@ -70,6 +70,7 @@ function initCarDOM() {
     $('#priceNum').text(totalprice + '$')
 }
 
+//选择数量层对象
 var layerCount;
 
 //点击购物车中的编辑按钮后弹出修改数量的modal
@@ -82,6 +83,7 @@ function showCountModal(the) {
     $('#dishname').val($(the).attr('data-name'))
     $('#dishprice').val($(the).attr('data-price'))
     $('#dishcount').val($(the).attr('data-count'))
+    //按钮功能改为修改
     $('#subTOCar').unbind('click')
     $('#subTOCar').bind('click',modTOCar)
     //弹窗
@@ -144,7 +146,6 @@ var modTOCar = function (){
     }).then(function (res) {
         if (res.data == 1) {
             layer.msg('修改成功')
-            $('#subTOCar').unbind('click')
             initCarDOM()
         } else {
             layer.msg('修改失败')

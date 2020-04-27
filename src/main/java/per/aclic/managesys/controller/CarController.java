@@ -69,7 +69,7 @@ public class CarController {
                 //该条目已存在, 追加
                 for (int y = 0; y < itmes.length; y++) {
                     if (y != itemloc) {
-                        res += itmes[y];
+                        res += itmes[y] + "#";
                     } else {
                         res += itmes[y].split("count:")[0] + "count:";
                         res += (Integer.parseInt(

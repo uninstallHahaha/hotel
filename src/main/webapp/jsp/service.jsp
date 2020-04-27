@@ -183,4 +183,62 @@
 </div>
 <div class="hide"></div>
 </body>
+
+
+
+<%--购物车--%>
+<div id="cardiv" style="display: none">
+    <table class="table-cart" style="width: 100%">
+        <tbody id="carTbody">
+        </tbody>
+    </table>
+    <div class="pricePlace">总计 :
+        <span class="priceNum" id="priceNum"> 100.86$</span>
+    </div>
+    <a href="/getCheckoutPage">
+        <div class="carBtn" id="carBtn">结算</div>
+    </a>
+</div>
+
+
+<%--数量选择弹窗--%>
+<div id="selDishCount" style="display: none">
+    <div class="imgwraper">
+        <h4 class="wrapertitle">选择数量</h4>
+    </div>
+    <div class="dishname">
+        <span id="c-dishname">${dishInfo.name}</span>
+        <span id="c-dishprice">单价: ${dishInfo.price}$</span>
+    </div>
+    <input value="${dishInfo.id}" id="dishid" style="display: none">
+    <input value="${dishInfo.name}" id="dishname" style="display: none">
+    <input value="${dishInfo.price}" id="dishprice" style="display: none">
+    <input value="1" id="subType" style="display: none">
+
+    <div class="layui-form-item" style="position: relative;top: 70px;">
+        <label class="layui-form-label">数量: </label>
+        <div class="layui-input-block">
+            <input type="number" name="title"
+                   id="dishcount"
+                   value="1"
+                   onchange="noNagtive(this)" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="okbtn" id="subTOCar">确定</div>
+</div>
+
+
+
+<link rel="stylesheet" type="text/css" href="/xgather/xcss/dishDetail.css">
+<script src="/xgather/xlib/layui-v2.5.6/layui/layui.all.js"></script>
+<script src="/xgather/xlib/axios.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/xgather/xcss/car.css">
+<link rel="stylesheet" type="text/css" href="/xgather/xlib/layui-v2.5.6/layui/css/layui.css">
+<script src="/xgather/xlib/layer/layer.js"></script>
+<script src="/xgather/xjs/car.js"></script>
+<script src="/xgather/xjs/util.js"></script>
+<script src="/xgather/xjs/dishDetail.js"></script>
+
+
 </html>

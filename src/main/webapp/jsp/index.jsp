@@ -791,7 +791,5 @@
 <script src="/xgather/xjs/car.js"></script>
 <script src="/xgather/xjs/util.js"></script>
 <script src="/xgather/xjs/index.js"></script>
-<script src="/xgather/xjs/dishDetail.js"></script>
-
 
 </html>

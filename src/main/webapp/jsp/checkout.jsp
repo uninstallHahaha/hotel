@@ -90,10 +90,7 @@
                 <a class='active' href="/getBillPage">账单
                 </a>
             </li>
-            <li class="navitem">
-                <a class='' href="#" id="showCar">购物车
-                </a>
-            </li>
+
         </ul>
         <div class="clear"></div>
     </div>

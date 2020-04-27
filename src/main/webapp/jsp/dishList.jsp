@@ -147,153 +147,6 @@
 
                         </c:forEach>
 
-                        <!--
-                        <li class="projectitem"><a href="shuguo/2.html"
-                                                   tppabs="http://dede24.va666.com/a/caipin/shuguo/2.html"
-                                                   target="_blank">
-                            <div class="project_img"><img src="../../uploads/allimg/160916/1-1609161631230-L.jpg"
-                                                          tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161631230-L.jpg"
-                                                          width="500" height="320"/></div>
-                            <div class="project_info">
-                                <div>
-                                    <p class="title">Santa Maria BBQ Tri-Tip</p>
-                                    <p class="subtitle">bacon-ranchero</p>
-                                    <p class="description hide">... 2013在线预约</p>
-                                </div>
-                            </div>
-                        </a>
-                            <a href="" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li class="projectitem"><a href="zhucai/3.html"
-                                                   tppabs="http://dede24.va666.com/a/caipin/zhucai/3.html"
-                                                   target="_blank">
-                            <div class="project_img"><img src="../../uploads/allimg/160916/1-160916163H00-L.jpg"
-                                                          tppabs="http://dede24.va666.com/uploads/allimg/160916/1-160916163H00-L.jpg"
-                                                          width="500" height="320"/></div>
-                            <div class="project_info">
-                                <div>
-                                    <p class="title">南非龙虾配澳洲带子（虾黄汁）</p>
-                                    <p class="subtitle">头盘开胃菜</p>
-                                    <p class="description hide">... 2013在线预约</p>
-                                </div>
-                            </div>
-                        </a>
-                            <a href="" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li class="projectitem"><a href="zhucai/4.html"
-                                                   tppabs="http://dede24.va666.com/a/caipin/zhucai/4.html"
-                                                   target="_blank">
-                            <div class="project_img"><img src="../../uploads/allimg/160916/1-1609161639520-L.jpg"
-                                                          tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161639520-L.jpg"
-                                                          width="500" height="320"/></div>
-                            <div class="project_info">
-                                <div>
-                                    <p class="title">海鲜烩牛仔骨</p>
-                                    <p class="subtitle">副菜菜肴</p>
-                                    <p class="description hide">... 2013在线预约</p>
-                                </div>
-                            </div>
-                        </a>
-                            <a href="" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li class="projectitem"><a href="fucai/5.html"
-                                                   tppabs="http://dede24.va666.com/a/caipin/fucai/5.html"
-                                                   target="_blank">
-                            <div class="project_img"><img src="../../uploads/allimg/160916/1-1609161642530-L.jpg"
-                                                          tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161642530-L.jpg"
-                                                          width="500" height="320"/></div>
-                            <div class="project_info">
-                                <div>
-                                    <p class="title">奶油蘑菇汤配蒜香法包</p>
-                                    <p class="subtitle">法式局葱头汤</p>
-                                    <p class="description hide">... 2013在线预约</p>
-                                </div>
-                            </div>
-                        </a>
-                            <a href="" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li class="projectitem"><a href="zhucai/26.html"
-                                                   tppabs="http://dede24.va666.com/a/caipin/zhucai/26.html"
-                                                   target="_blank">
-                            <div class="project_img"><img src="../../uploads/allimg/160916/1-1609161951300-L.jpg"
-                                                          tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161951300-L.jpg"
-                                                          width="500" height="320"/></div>
-                            <div class="project_info">
-                                <div>
-                                    <p class="title">花椰菜生蔬菜沙拉</p>
-                                    <p class="subtitle">蔬菜沙拉</p>
-                                    <p class="description hide">... 2013在线预约</p>
-                                </div>
-                            </div>
-                        </a>
-                            <a href="" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li class="projectitem"><a href="zhucai/27.html"
-                                                   tppabs="http://dede24.va666.com/a/caipin/zhucai/27.html"
-                                                   target="_blank">
-                            <div class="project_img"><img src="../../uploads/allimg/160916/1-1609161953070-L.jpg"
-                                                          tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161953070-L.jpg"
-                                                          width="500" height="320"/></div>
-                            <div class="project_info">
-                                <div>
-                                    <p class="title">四季水果摩卡慕斯</p>
-                                    <p class="subtitle">甜品</p>
-                                    <p class="description hide">... 2013在线预约</p>
-                                </div>
-                            </div>
-                        </a>
-                            <a href="" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li class="projectitem"><a href="zhucai/28.html"
-                                                   tppabs="http://dede24.va666.com/a/caipin/zhucai/28.html"
-                                                   target="_blank">
-                            <div class="project_img"><img src="../../uploads/allimg/160916/1-160916220J30-L.jpg"
-                                                          tppabs="http://dede24.va666.com/uploads/allimg/160916/1-160916220J30-L.jpg"
-                                                          width="500" height="320"/></div>
-                            <div class="project_info">
-                                <div>
-                                    <p class="title">黑椒牛仔骨配黄油西兰花</p>
-                                    <p class="subtitle">头盘开胃菜</p>
-                                    <p class="description hide">... 2013在线预约</p>
-                                </div>
-                            </div>
-                        </a>
-                            <a href="" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li class="projectitem"><a href="zhucai/29.html"
-                                                   tppabs="http://dede24.va666.com/a/caipin/zhucai/29.html"
-                                                   target="_blank">
-                            <div class="project_img"><img src="../../uploads/allimg/160916/1-1609162211240-L.jpg"
-                                                          tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609162211240-L.jpg"
-                                                          width="500" height="320"/></div>
-                            <div class="project_info">
-                                <div>
-                                    <p class="title">奶豆腐配美味啫喱</p>
-                                    <p class="subtitle">bacon-ranchero</p>
-                                    <p class="description hide">... 2013在线预约</p>
-                                </div>
-                            </div>
-                        </a>
-                            <a href="" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li class="projectitem"><a href="fucai/30.html"
-                                                   tppabs="http://dede24.va666.com/a/caipin/fucai/30.html"
-                                                   target="_blank">
-                            <div class="project_img"><img src="../../uploads/allimg/160916/1-1609162234310-L.jpg"
-                                                          tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609162234310-L.jpg"
-                                                          width="500" height="320"/></div>
-                            <div class="project_info">
-                                <div>
-                                    <p class="title">新西兰羊排配黑椒蘑菇汁</p>
-                                    <p class="subtitle">意式蔬菜汤</p>
-                                    <p class="description hide">... 2013在线预约</p>
-                                </div>
-                            </div>
-                        </a>
-                            <a href="" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-
-                        -->
 
                     </ul>
                 </div>
@@ -328,4 +181,64 @@
 </div>
 <div class="hide"></div>
 </body>
+
+
+
+
+<%--购物车--%>
+<div id="cardiv" style="display: none">
+    <table class="table-cart" style="width: 100%">
+        <tbody id="carTbody">
+        </tbody>
+    </table>
+    <div class="pricePlace">总计 :
+        <span class="priceNum" id="priceNum"> 100.86$</span>
+    </div>
+    <a href="/getCheckoutPage">
+        <div class="carBtn" id="carBtn">结算</div>
+    </a>
+</div>
+
+
+<%--数量选择弹窗--%>
+<div id="selDishCount" style="display: none">
+    <div class="imgwraper">
+        <h4 class="wrapertitle">选择数量</h4>
+    </div>
+    <div class="dishname">
+        <span id="c-dishname">${dishInfo.name}</span>
+        <span id="c-dishprice">单价: ${dishInfo.price}$</span>
+    </div>
+    <input value="${dishInfo.id}" id="dishid" style="display: none">
+    <input value="${dishInfo.name}" id="dishname" style="display: none">
+    <input value="${dishInfo.price}" id="dishprice" style="display: none">
+    <input value="1" id="subType" style="display: none">
+
+    <div class="layui-form-item" style="position: relative;top: 70px;">
+        <label class="layui-form-label">数量: </label>
+        <div class="layui-input-block">
+            <input type="number" name="title"
+                   id="dishcount"
+                   value="1"
+                   onchange="noNagtive(this)" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="okbtn" id="subTOCar">确定</div>
+</div>
+
+
+
+<link rel="stylesheet" type="text/css" href="/xgather/xcss/dishDetail.css">
+<script src="/xgather/xlib/layui-v2.5.6/layui/layui.all.js"></script>
+<script src="/xgather/xlib/axios.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/xgather/xcss/car.css">
+<link rel="stylesheet" type="text/css" href="/xgather/xlib/layui-v2.5.6/layui/css/layui.css">
+<script src="/xgather/xlib/layer/layer.js"></script>
+<script src="/xgather/xjs/car.js"></script>
+<script src="/xgather/xjs/util.js"></script>
+<script src="/xgather/xjs/dishDetail.js"></script>
+
+
+
 </html>

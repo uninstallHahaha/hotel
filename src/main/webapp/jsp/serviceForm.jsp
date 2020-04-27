@@ -195,6 +195,22 @@
 </body>
 
 
+
+<%--购物车--%>
+<div id="cardiv" style="display: none">
+    <table class="table-cart" style="width: 100%">
+        <tbody id="carTbody">
+        </tbody>
+    </table>
+    <div class="pricePlace">总计 :
+        <span class="priceNum" id="priceNum"> 100.86$</span>
+    </div>
+    <a href="/getCheckoutPage">
+        <div class="carBtn" id="carBtn">结算</div>
+    </a>
+</div>
+
+
 <%--数量选择弹窗--%>
 <div id="selDishCount" style="display: none">
     <div class="imgwraper">

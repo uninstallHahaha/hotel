@@ -181,6 +181,22 @@
 <div class="hide"></div>
 </body>
 
+
+
+<%--购物车--%>
+<div id="cardiv" style="display: none">
+    <table class="table-cart" style="width: 100%">
+        <tbody id="carTbody">
+        </tbody>
+    </table>
+    <div class="pricePlace">总计 :
+        <span class="priceNum" id="priceNum"> 100.86$</span>
+    </div>
+    <a href="/getCheckoutPage">
+        <div class="carBtn" id="carBtn">结算</div>
+    </a>
+</div>
+
 <%--数量选择弹窗--%>
 <div id="selDishCount" style="display: none">
     <div class="imgwraper">
@@ -207,6 +223,11 @@
     <div class="okbtn" id="subTOCar">确定</div>
 </div>
 
+
+<script src="/xgather/xlib/axios.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/xgather/xcss/car.css">
+<script src="/xgather/xjs/car.js"></script>
+<script src="/xgather/xjs/util.js"></script>
 
 <link rel="stylesheet" type="text/css" href="/xgather/xlib/layui-v2.5.6/layui/css/layui.css">
 <link rel="stylesheet" type="text/css" href="/xgather/xcss/dishDetail.css">

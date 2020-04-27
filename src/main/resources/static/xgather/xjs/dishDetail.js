@@ -2,10 +2,12 @@
 
 $(function () {
 
-    //选择数量层对象
-    var layerCount;
 
+    //打开选择数量的弹窗
     $('#joinCarBtn').click(function () {
+        //按钮功能改为添加
+        $('#subTOCar').unbind('click')
+        $('#subTOCar').bind('click',subTOCar)
         layerCount = layer.open({
             type: 1,
             // offset: 'l',
