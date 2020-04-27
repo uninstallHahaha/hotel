@@ -28,4 +28,6 @@ public interface ServeMapper {
     int updateByPrimaryKeySelective(Serve record);
 
     int updateByPrimaryKey(Serve record);
+
+    int modState(String serveId, int state);
 }

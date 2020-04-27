@@ -117,7 +117,7 @@
                 <ul class="wrap">
 
                     <li class="serviceitem"><a href="/getServiceForm/1" tppabs="http://dede24.va666.com/a/fuwu/17.html"
-                                               target="_blank"><img
+                                             ><img
                             src="../../uploads/allimg/160916/1-1609161I6040-L.png"
                             tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161I6040-L.png" width="320"
                             height="120"/>
@@ -131,7 +131,7 @@
                     </li>
 
                     <li class="serviceitem"><a href="/getServiceForm/2" tppabs="http://dede24.va666.com/a/fuwu/18.html"
-                                               target="_blank"><img
+                                             ><img
                             src="../../uploads/allimg/160916/1-1609161I6330-L.png"
                             tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161I6330-L.png" width="320"
                             height="120"/>
@@ -145,7 +145,7 @@
                     </li>
 
                     <li class="serviceitem"><a href="/getServiceForm/3" tppabs="http://dede24.va666.com/a/fuwu/19.html"
-                                               target="_blank"><img
+                                          ><img
                             src="../../uploads/allimg/160916/1-1609161IA70-L.png"
                             tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161IA70-L.png" width="320"
                             height="120"/>

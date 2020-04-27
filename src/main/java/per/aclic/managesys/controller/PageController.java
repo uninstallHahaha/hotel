@@ -7,10 +7,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import per.aclic.managesys.model.OrderI;
+import per.aclic.managesys.model.Serve;
 import per.aclic.managesys.model.mixmodel.OrderCollection;
 import per.aclic.managesys.model.utilmodel.Item;
 import per.aclic.managesys.service.DishService;
 import per.aclic.managesys.service.OrderService;
+import per.aclic.managesys.service.ServiceService;
 
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
@@ -24,6 +26,8 @@ public class PageController {
     DishService dishService;
     @Autowired
     OrderService orderService;
+    @Autowired
+    ServiceService serviceService;
 
 
     //    模板跳转通用公式
@@ -91,7 +95,9 @@ public class PageController {
 
     @RequestMapping("/getServiceListPage")
     public String getServiceListPage(Model model){
-        return "service";
+        List<Serve> serves = serviceService.findAll();
+        model.addAttribute("bills",serves);
+        return "serveList";
     }
 
 

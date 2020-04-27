@@ -40,6 +40,7 @@
       </foreach>
     </where>
   </sql>
+
   <sql id="Update_By_Example_Where_Clause">
     <where>
       <foreach collection="example.oredCriteria" item="criteria" separator="or">
@@ -171,6 +172,8 @@
       <include refid="Example_Where_Clause" />
     </if>
   </select>
+
+
   <update id="updateByExampleSelective" parameterType="map">
     update serve
     <set>
@@ -203,6 +206,8 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
+
+
   <update id="updateByExample" parameterType="map">
     update serve
     set id = #{record.id,jdbcType=VARCHAR},
@@ -217,6 +222,8 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
+
+
   <update id="updateByPrimaryKeySelective" parameterType="per.aclic.managesys.model.Serve">
     update serve
     <set>
@@ -244,6 +251,8 @@
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
+
+
   <update id="updateByPrimaryKey" parameterType="per.aclic.managesys.model.Serve">
     update serve
     set username = #{username,jdbcType=VARCHAR},
@@ -254,5 +263,12 @@
       state = #{state,jdbcType=INTEGER},
       ctime = #{ctime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=VARCHAR}
+  </update>
+
+
+  <update id="modState" parameterType="per.aclic.managesys.model.Serve">
+    update serve
+    set state = #{state}
+    where id = #{serveId}
   </update>
 </mapper>
