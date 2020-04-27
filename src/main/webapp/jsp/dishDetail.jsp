@@ -226,6 +226,7 @@
 <script src="/xgather/xlib/layui-v2.5.6/layui/layui.all.js"></script>
 <script src="/xgather/xlib/jquery.min.js"></script>
 <script src="/xgather/xlib/layer/layer.js"></script>
+<script src="/xgather/xjs/util.js"></script>
 <script src="/xgather/xjs/dishDetail.js"></script>
 
 </html>

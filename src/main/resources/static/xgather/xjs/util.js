@@ -1,3 +1,10 @@
+function noNagtive(e) {
+    if ($(e).val() <= 0) {
+        $(e).val(1)
+    }
+}
+
+
 function getItemsFormCookie() {
     //从 cookie 中解出购物车数据
     var arrCookie = document.cookie.split(';')

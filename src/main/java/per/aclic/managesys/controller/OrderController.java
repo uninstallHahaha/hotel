@@ -56,13 +56,13 @@ public class OrderController {
             int ers = orderService.addOrder(order);
             if (ers == 0) addRes = 0;
         }
-        if (addRes == 1) {
+//        if (addRes == 1) {
             //清空购物车
             Cookie car_cookie = new Cookie("CAR", "");
             car_cookie.setPath(request.getRequestURI() + "/");
             car_cookie.setMaxAge(0);
             response.addCookie(car_cookie);
-        }
+//        }
         return addRes;
     }
 

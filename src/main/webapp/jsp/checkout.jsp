@@ -134,7 +134,8 @@
                                         <input type="text" id="username"
                                                value="alice"
                                                required lay-verify="required"
-                                               placeholder="请输入名字" autocomplete="off" class="layui-input">
+                                               placeholder="请输入名字" autocomplete="off"
+                                               class="layui-input black">
                                     </div>
                                 </div>
                                 <div class="layui-form-item">
@@ -143,7 +144,8 @@
                                         <input type="text" id="userphone"
                                                value="1322311231"
                                                required lay-verify="required|phone|number"
-                                               placeholder="请输入手机号" autocomplete="off" class="layui-input">
+                                               placeholder="请输入手机号" autocomplete="off"
+                                               class="layui-input black">
                                     </div>
                                 </div>
                                 <div class="layui-form-item">
@@ -170,23 +172,23 @@
                         <div class="ordertitle">您的账单</div>
                         <table class="table-cart" style="width: 100%">
                             <tbody id="carTbody">
-                        <!--    <tr class="cartr">
-                                <td class="title">
-                                <span class="name">
-                                    <a href="#productModal" data-toggle="modal">Pizza Chicked BBQ</a>
-                                </span>
-                                </td>
-                                <td class="count">x2</td>
-                                <td class="price">$9.82</td>
-                                <td class="actions">
-                                    <a href="#productModal" data-toggle="modal" class="action-icon">
-                                        <i class="layui-icon layui-icon-edit"></i>
-                                    </a>
-                                    <a href="#" class="action-icon">
-                                        <i class="layui-icon layui-icon-close"></i>
-                                    </a>
-                                </td>
-                            </tr> -->
+                            <!--    <tr class="cartr">
+                                    <td class="title">
+                                    <span class="name">
+                                        <a href="#productModal" data-toggle="modal">Pizza Chicked BBQ</a>
+                                    </span>
+                                    </td>
+                                    <td class="count">x2</td>
+                                    <td class="price">$9.82</td>
+                                    <td class="actions">
+                                        <a href="#productModal" data-toggle="modal" class="action-icon">
+                                            <i class="layui-icon layui-icon-edit"></i>
+                                        </a>
+                                        <a href="#" class="action-icon">
+                                            <i class="layui-icon layui-icon-close"></i>
+                                        </a>
+                                    </td>
+                                </tr> -->
                             </tbody>
                         </table>
                         <div class="pricePlace">总计 :
@@ -228,10 +230,40 @@
 </body>
 
 
+<%--数量选择弹窗--%>
+<div id="selDishCount" style="display: none">
+    <div class="imgwraper">
+        <h4 class="wrapertitle">选择数量</h4>
+    </div>
+    <div class="dishname">
+        <span id="c-dishname">${dishInfo.name}</span>
+        <span id="c-dishprice">单价: ${dishInfo.price}$</span>
+    </div>
+    <input value="${dishInfo.id}" id="dishid" style="display: none">
+    <input value="${dishInfo.name}" id="dishname" style="display: none">
+    <input value="${dishInfo.price}" id="dishprice" style="display: none">
+    <input value="1" id="subType" style="display: none">
+
+    <div class="layui-form-item" style="position: relative;top: 70px;">
+        <label class="layui-form-label">数量: </label>
+        <div class="layui-input-block ">
+            <input type="number" name="title"
+                   id="dishcount"
+                   value="1"
+                   onchange="noNagtive(this)" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
+                   class="layui-input noblack">
+        </div>
+    </div>
+    <div class="okbtn" id="subTOCar">确定</div>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="/xgather/xcss/dishDetail.css">
 <link rel="stylesheet" type="text/css" href="/xgather/xcss/car.css">
 <link rel="stylesheet" type="text/css" href="/xgather/xcss/checkout.css">
 <link rel="stylesheet" type="text/css" href="/xgather/xlib/layui-v2.5.6/layui/css/layui.css">
 <script src="/xgather/xlib/jquery.min.js"></script>
+<script src="/xgather/xlib/axios.min.js"></script>
 <script src="/xgather/xlib/layer/layer.js"></script>
 <script src="/xgather/xlib/layui-v2.5.6/layui/layui.all.js"></script>
 <script src="/xgather/xjs/car.js"></script>

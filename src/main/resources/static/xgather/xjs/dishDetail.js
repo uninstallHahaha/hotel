@@ -1,8 +1,3 @@
-function noNagtive(e) {
-    if ($(e).val() <= 0) {
-        $(e).val(1)
-    }
-}
 
 
 $(function () {
