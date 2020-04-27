@@ -81,4 +81,25 @@ public class PageController {
         model.addAttribute("bills",resList);
         return "bills";
     }
+
+
+    @RequestMapping("/getServicePage")
+    public String getServicePage(Model model){
+        return "service";
+    }
+
+
+    @RequestMapping("/getServiceListPage")
+    public String getServiceListPage(Model model){
+        return "service";
+    }
+
+
+    @RequestMapping("/getServiceForm/{type}")
+    public String getServiceForm(Model model,
+                                 @PathVariable int type){
+        model.addAttribute("type",type);
+        return "serviceForm";
+    }
+
 }

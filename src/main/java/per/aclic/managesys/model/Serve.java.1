@@ -2,8 +2,12 @@ package per.aclic.managesys.model;
 
 import java.util.Date;
 
-public class Service {
+public class Serve {
     private String id;
+
+    private String username;
+
+    private String userphone;
 
     private String room;
 
@@ -21,6 +25,22 @@ public class Service {
 
     public void setId(String id) {
         this.id = id == null ? null : id.trim();
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
+    }
+
+    public String getUserphone() {
+        return userphone;
+    }
+
+    public void setUserphone(String userphone) {
+        this.userphone = userphone == null ? null : userphone.trim();
     }
 
     public String getRoom() {

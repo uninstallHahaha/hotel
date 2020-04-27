@@ -137,7 +137,7 @@
             src="templets/cloud_04/images/logo.png" tppabs="http://dede24.va666.com/templets/cloud_04/images/logo.png"
             height="40"/></a>
         <ul id="nav">
-            <li class="navitem"><a class='active' href="index.htm" tppabs="http://dede24.va666.com/"
+            <li class="navitem"><a class='active' href="/" tppabs="http://dede24.va666.com/"
                                    target="_self">首页</a></li>
             <li class="navitem"><a class='' href="/getDishList/0" tppabs="http://dede24.va666.com/a/caipin/">菜品
                 <!--
@@ -164,15 +164,10 @@
             </li>
 
             <li class="navitem"><a class='' href="a/guanyu/index.htm" tppabs="http://dede24.va666.com/a/guanyu/">关于
-                <!--
-                <i class='fa fa-angle-down'></i>
-                -->
             </a>
                 <ul class="subnav">
-                    <li><a href="a/guanyu/index.htm" tppabs="http://dede24.va666.com/a/guanyu/">关于</a></li>
                     <li><a href="a/guanyu/tuandui/index.htm" tppabs="http://dede24.va666.com/a/guanyu/tuandui">团队</a>
                     </li>
-                    <li><a href="a/guanyu/xinwen/index.htm" tppabs="http://dede24.va666.com/a/guanyu/xinwen">新闻</a></li>
                 </ul>
             </li>
             <li class="navitem"><a class='' href="a/tuce/index.htm" tppabs="http://dede24.va666.com/a/tuce/">图册
@@ -191,10 +186,15 @@
                            tppabs="http://dede24.va666.com/a/tuce/deshicaiyao">德式菜肴</a></li>
                 </ul>
             </li>
-            <li class="navitem">
-                <a class='' href="a/fuwu/index.htm" tppabs="http://dede24.va666.com/a/fuwu/">服务
-                </a>
+
+            <li class="navitem"><a class='' href="/getServicePage">服务
+            </a>
+                <ul class="subnav">
+                    <li><a href="/getServicePage">呼叫服务</a></li>
+                    <li><a href="/getServiceListPage">服务记录</a></li>
+                </ul>
             </li>
+
             <li class="navitem">
                 <a class='' href="/getBillPage">账单
                 </a>
@@ -225,7 +225,7 @@
                     </video>
                     <div class="mask"></div>
                     <a target="_blank">
-                        <div><p class="title ellipsis">Welcome To Maker Cloud</p>
+                        <div><p class="title ellipsis">Welcome To MARRIOT.T</p>
                             <p class="subtitle">Develop a perfact taste for mastery</p></div>
                         <div class="sliderArrow fa fa-angle-down"></div>
                     </a></li>
@@ -328,380 +328,399 @@
             </div>
         </div><!--project-->
         <div id="mservice" class="module"
-             style="background-image:url(/templets/cloud_04/images/1468930119172.jpg); data-infiniteLoop="
+             style="background:#212121;" data-infiniteLoop="
         ">
-        <div class="bgmask"></div>
-        <div class="content layoutslider">
-            <div class="header wow fw" data-wow-delay=".1s">
-                <p class="title">服务</p>
-                <p class="subtitle">service</p>
-            </div>
-            <div class="module-content fw" id="servicelist">
-                <div class="wrapper">
-                    <ul class="content_list" data-options-sliders="3" data-options-margin="0" data-options-ease="1"
-                        data-options-speed="0.5">
-                        <li id="serviceitem_1" class="serviceitem wow"><a href="a/fuwu/18.html"
-                                                                          tppabs="http://dede24.va666.com/a/fuwu/18.html"
-                                                                          target="_blank"><img
-                                src="uploads/allimg/160916/1-1609161I6330-L.png"
-                                tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161I6330-L.png" width="320"
-                                height="120"/>
-                            <div>
-                                <p class="title">西餐礼仪细节</p>
-                                <p class="description">吃沙拉时，通常会遇上较大片的菜叶，这时不要用刀子切开菜叶而应以刀叉将其折起来，再以 ......</p>
-                            </div>
-                        </a>
-                            <a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li id="serviceitem_2" class="serviceitem wow"><a href="a/fuwu/17.html"
-                                                                          tppabs="http://dede24.va666.com/a/fuwu/17.html"
-                                                                          target="_blank"><img
-                                src="uploads/allimg/160916/1-1609161I6040-L.png"
-                                tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161I6040-L.png" width="320"
-                                height="120"/>
-                            <div>
-                                <p class="title">西餐服务知识</p>
-                                <p class="description">在西餐中最具有代表性的食物，那就非牛排莫属了，精致菜式大放送!全部都出自世界 ......</p>
-                            </div>
-                        </a>
-                            <a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li id="serviceitem_3" class="serviceitem wow"><a href="a/fuwu/19.html"
-                                                                          tppabs="http://dede24.va666.com/a/fuwu/19.html"
-                                                                          target="_blank"><img
-                                src="uploads/allimg/160916/1-1609161IA70-L.png"
-                                tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161IA70-L.png" width="320"
-                                height="120"/>
-                            <div>
-                                <p class="title">米其林精美菜式须知</p>
-                                <p class="description">在法国，厨师属于艺术家的范畴，法国还有一家全球闻名、历史悠久的为这些艺术家及他们的 ......</p>
-                            </div>
-                        </a>
-                            <a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li id="serviceitem_4" class="serviceitem wow"><a href="a/fuwu/20.html"
-                                                                          tppabs="http://dede24.va666.com/a/fuwu/20.html"
-                                                                          target="_blank"><img
-                                src="uploads/allimg/160916/1-1609161II50-L.png"
-                                tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161II50-L.png" width="320"
-                                height="120"/>
-                            <div>
-                                <p class="title">SPECIAL EVENTS</p>
-                                <p class="description">For special events & private functions in New York City please
-                                    complete the below inquiry form ......</p>
-                            </div>
-                        </a>
-                            <a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li id="serviceitem_5" class="serviceitem wow"><a href="a/fuwu/21.html"
-                                                                          tppabs="http://dede24.va666.com/a/fuwu/21.html"
-                                                                          target="_blank"><img
-                                src="uploads/allimg/160916/1-1609161IK80-L.png"
-                                tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161IK80-L.png" width="320"
-                                height="120"/>
-                            <div>
-                                <p class="title">NEW YORK CITY RESTAURANT</p>
-                                <p class="description">在西餐中最具有代表性的食物，那就非牛排莫属了，精致菜式大放送!全部都出自世界 ......</p>
-                            </div>
-                        </a>
-                            <a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
+            <div class="bgmask"></div>
+            <div class="content layoutslider">
+                <div class="header wow fw" data-wow-delay=".1s">
+                    <p class="title">相关</p>
+                    <p class="subtitle">relation</p>
+                </div>
+                <div class="module-content fw" id="servicelist">
+                    <div class="wrapper">
+                        <ul class="content_list" data-options-sliders="3" data-options-margin="0" data-options-ease="1"
+                            data-options-speed="0.5">
+                            <li id="serviceitem_1" class="serviceitem wow"><a href="a/fuwu/18.html"
+                                                                              tppabs="http://dede24.va666.com/a/fuwu/18.html"
+                                                                              target="_blank"><img
+                                    src="uploads/allimg/160916/1-1609161I6330-L.png"
+                                    tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161I6330-L.png"
+                                    width="320"
+                                    height="120"/>
+                                <div>
+                                    <p class="title">西餐礼仪细节</p>
+                                    <p class="description">吃沙拉时，通常会遇上较大片的菜叶，这时不要用刀子切开菜叶而应以刀叉将其折起来，再以 ......</p>
+                                </div>
+                            </a>
+                                <a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li id="serviceitem_2" class="serviceitem wow"><a href="a/fuwu/17.html"
+                                                                              tppabs="http://dede24.va666.com/a/fuwu/17.html"
+                                                                              target="_blank"><img
+                                    src="uploads/allimg/160916/1-1609161I6040-L.png"
+                                    tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161I6040-L.png"
+                                    width="320"
+                                    height="120"/>
+                                <div>
+                                    <p class="title">西餐服务知识</p>
+                                    <p class="description">在西餐中最具有代表性的食物，那就非牛排莫属了，精致菜式大放送!全部都出自世界 ......</p>
+                                </div>
+                            </a>
+                                <a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li id="serviceitem_3" class="serviceitem wow"><a href="a/fuwu/19.html"
+                                                                              tppabs="http://dede24.va666.com/a/fuwu/19.html"
+                                                                              target="_blank"><img
+                                    src="uploads/allimg/160916/1-1609161IA70-L.png"
+                                    tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161IA70-L.png"
+                                    width="320"
+                                    height="120"/>
+                                <div>
+                                    <p class="title">米其林精美菜式须知</p>
+                                    <p class="description">在法国，厨师属于艺术家的范畴，法国还有一家全球闻名、历史悠久的为这些艺术家及他们的 ......</p>
+                                </div>
+                            </a>
+                                <a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li id="serviceitem_4" class="serviceitem wow"><a href="a/fuwu/20.html"
+                                                                              tppabs="http://dede24.va666.com/a/fuwu/20.html"
+                                                                              target="_blank"><img
+                                    src="uploads/allimg/160916/1-1609161II50-L.png"
+                                    tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161II50-L.png"
+                                    width="320"
+                                    height="120"/>
+                                <div>
+                                    <p class="title">SPECIAL EVENTS</p>
+                                    <p class="description">For special events & private functions in New York City
+                                        please
+                                        complete the below inquiry form ......</p>
+                                </div>
+                            </a>
+                                <a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li id="serviceitem_5" class="serviceitem wow"><a href="a/fuwu/21.html"
+                                                                              tppabs="http://dede24.va666.com/a/fuwu/21.html"
+                                                                              target="_blank"><img
+                                    src="uploads/allimg/160916/1-1609161IK80-L.png"
+                                    tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161IK80-L.png"
+                                    width="320"
+                                    height="120"/>
+                                <div>
+                                    <p class="title">NEW YORK CITY RESTAURANT</p>
+                                    <p class="description">在西餐中最具有代表性的食物，那就非牛排莫属了，精致菜式大放送!全部都出自世界 ......</p>
+                                </div>
+                            </a>
+                                <a href="#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                            </li>
 
 
-                    </ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <a href="a/guanyu/xinwen/index.htm" tppabs="http://dede24.va666.com/a/guanyu/xinwen/"
+                   class="more wow">MORE<i class="fa fa-angle-right"></i></a></div>
+        </div>
+        <div id="mpage" class="module">
+            <div class="bgmask"></div>
+            <div class="content">
+                <div class="module-content">
+                    <div class="wrapper">
+                        <ul class="slider one">
+                            <li>
+                                <div class="header wow" data-wow-delay=".2s"><p class="title">关于</p>
+                                    <p class="subtitle">about</p></div>
+                                <div class="des-wrap"><p class="description wow" data-wow-delay=".3s">
+                                    因为米其林指南的高标准和严要求，它一直是餐饮业内举足轻重的权威，吃货的圣经，而品尝米其林星级餐厅也被我等吃货称作是“摘星之旅”。仅仅能上米其林指南推荐就让很多餐厅都趋之若鹜了，能够获得米其林星绝对是所有餐厅和大厨梦寐以求的事情。就像它指南里写的一样，“得到米其林星可以改变一个餐厅的命运”。 </p>
+                                </div>
+                                <a href="https://guide.michelin.com/en" tppabs="http://dede24.va666.com/a/guanyu/"
+                                   class="more wow"
+                                   data-wow-delay=".5s">MORE<i class="fa fa-angle-right"></i></a>
+                                <div class="fimg wow"
+                                     style="background-image:url(/templets/cloud_04/images/1468930213526.jpg)"></div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="clear"></div>
-            <a href="a/guanyu/xinwen/index.htm" tppabs="http://dede24.va666.com/a/guanyu/xinwen/"
-               class="more wow">MORE<i class="fa fa-angle-right"></i></a></div>
-    </div>
-    <div id="mpage" class="module">
-        <div class="bgmask"></div>
-        <div class="content">
-            <div class="module-content">
-                <div class="wrapper">
-                    <ul class="slider one">
-                        <li>
-                            <div class="header wow" data-wow-delay=".2s"><p class="title">关于</p>
-                                <p class="subtitle">about</p></div>
-                            <div class="des-wrap"><p class="description wow" data-wow-delay=".3s">
-                                创客云数字市场是一个主题模板/创意作品/数字交易平台，你可以出售最优秀的网页模板和平面设计作品！本站全部主题模板为100%正品模板，支持更新升级！</p></div>
-                            <a href="a/guanyu/index.htm" tppabs="http://dede24.va666.com/a/guanyu/" class="more wow"
-                               data-wow-delay=".5s">MORE<i class="fa fa-angle-right"></i></a>
-                            <div class="fimg wow"
-                                 style="background-image:url(/templets/cloud_04/images/1468930213526.jpg)"></div>
-                        </li>
-                    </ul>
+        </div>
+        <div id="mnews" class="module" style="background:#212121;">
+            <div class="bgmask"></div>
+            <div class="content layoutnone">
+                <div class="header wow">
+                    <p class="title">要闻</p>
+                    <p class="subtitle">notice</p>
+                </div>
+                <div class="module-content" id="newslist">
+                    <div class="wrapper">
+                        <ul class="content_list" data-options-sliders="4" data-options-margin="0"
+                            data-options-ease="cubic-bezier(.73,-0.03,.24,1.01)" data-options-speed="0.8"
+                            data-options-mode="horizontal" data-options-wheel="0">
+                            <li id="newsitem_0" class='wow newstitem left'
+                            "><a class="newscontent" target="_blank" href="a/guanyu/xinwen/gongsixinwen/22.html"
+                                 tppabs="http://dede24.va666.com/a/guanyu/xinwen/gongsixinwen/22.html">
+                            <div class="news_wrapper">
+                                <div class="newsbody">
+                                    <p class="date"><span class="md">09-18<span>-</span></span><span
+                                            class="year">09-18</span></p>
+                                    <p class="title">理想的下午，在家喝出女</p>
+                                    <div class="separator"></div>
+                                    <p class="description">
+                                        合理的饮食，是身体健康的第一要素抵挡冬日的严寒一个人的餐桌，也可以有更其实除了各种游乐设施，既体现迪士尼童话主题，又入乡随</p>
+                                </div>
+                            </div>
+                            <div class="newsimg"
+                                 style="background-image:url(/uploads/allimg/160916/1-1609161K1390-L.jpg)"></div>
+                        </a>
+                            <a href="a/guanyu/xinwen/gongsixinwen/22.html"
+                               tppabs="http://dede24.va666.com/a/guanyu/xinwen/gongsixinwen/22.html" target="_blank"
+                               class="details">more<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li id="newsitem_1" class='wow newstitem right'
+                            "><a class="newscontent" target="_blank" href="a/guanyu/xinwen/xingyexinwen/25.html"
+                                 tppabs="http://dede24.va666.com/a/guanyu/xinwen/xingyexinwen/25.html">
+                            <div class="news_wrapper">
+                                <div class="newsbody">
+                                    <p class="date"><span class="md">09-18<span>-</span></span><span
+                                            class="year">09-18</span></p>
+                                    <p class="title">食物有超乎想象的治愈力</p>
+                                    <div class="separator"></div>
+                                    <p class="description">除了面包和泡面之外，一个人的餐桌，也可以有更多选择一个人的生活除了面包和泡面之外，一个人的餐桌 ... ...</p>
+                                </div>
+                            </div>
+                            <div class="newsimg"
+                                 style="background-image:url(/uploads/allimg/160916/1-1609161K4510-L.jpg)"></div>
+                        </a>
+                            <a href="a/guanyu/xinwen/xingyexinwen/25.html"
+                               tppabs="http://dede24.va666.com/a/guanyu/xinwen/xingyexinwen/25.html" target="_blank"
+                               class="details">more<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li id="newsitem_2" class='wow newstitem right'
+                            "><a class="newscontent" target="_blank" href="a/guanyu/xinwen/gongsixinwen/23.html"
+                                 tppabs="http://dede24.va666.com/a/guanyu/xinwen/gongsixinwen/23.html">
+                            <div class="news_wrapper">
+                                <div class="newsbody">
+                                    <p class="date"><span class="md">09-17<span>-</span></span><span
+                                            class="year">09-17</span></p>
+                                    <p class="title">菊苣烤龙虾配照烧鹅肝和</p>
+                                    <div class="separator"></div>
+                                    <p class="description">合理的饮食，是身体健康的第一要素抵挡冬日的严寒一个人的餐桌，也可以有更 ......</p>
+                                </div>
+                            </div>
+                            <div class="newsimg"
+                                 style="background-image:url(/uploads/allimg/160916/1-1609161K2340-L.jpg)"></div>
+                        </a>
+                            <a href="a/guanyu/xinwen/gongsixinwen/23.html"
+                               tppabs="http://dede24.va666.com/a/guanyu/xinwen/gongsixinwen/23.html" target="_blank"
+                               class="details">more<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li id="newsitem_3" class='wow newstitem right'
+                            "><a class="newscontent" target="_blank" href="a/guanyu/xinwen/xingyexinwen/24.html"
+                                 tppabs="http://dede24.va666.com/a/guanyu/xinwen/xingyexinwen/24.html">
+                            <div class="news_wrapper">
+                                <div class="newsbody">
+                                    <p class="date"><span class="md">09-17<span>-</span></span><span
+                                            class="year">09-17</span></p>
+                                    <p class="title">西餐礼仪细节，让你成为</p>
+                                    <div class="separator"></div>
+                                    <p class="description">>除了面包和泡面之外，一个人的餐桌，也可以有更多选择一个人的生活 ......</p>
+                                </div>
+                            </div>
+                            <div class="newsimg"
+                                 style="background-image:url(/uploads/allimg/160916/1-1609161H6260-L.png)"></div>
+                        </a>
+                            <a href="a/guanyu/xinwen/xingyexinwen/24.html"
+                               tppabs="http://dede24.va666.com/a/guanyu/xinwen/xingyexinwen/24.html" target="_blank"
+                               class="details">more<i class="fa fa-angle-right"></i></a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <a href="a/guanyu/xinwen/index.htm" tppabs="http://dede24.va666.com/a/guanyu/xinwen/"
+                   class="more wow">MORE<i class="fa fa-angle-right"></i></a>
+                <div style="height:0">&nbsp;</div>
+            </div>
+        </div>
+        <div id="mteam" data-title="" class="module">
+            <div class="bgmask"></div>
+            <div class="content layoutnone">
+                <div class="header wow">
+                    <p class="title">团队</p>
+                    <p class="subtitle"></p>
+                </div>
+                <div class="module-content fw">
+                    <div class="wrapper">
+                        <ul class="content_list" data-options-sliders="3" data-options-margin="20"
+                            data-options-ease="cubic-bezier(.73,-0.03,.24,1.01)" data-options-speed="1">
+                            <li id="teamitem_1" class="wow">
+                                <div class="header wow" data-wow-delay=".1s"><a href="a/guanyu/tuandui/6.html"
+                                                                                tppabs="http://dede24.va666.com/a/guanyu/tuandui/6.html"
+                                                                                target="_blank"><img
+                                        src="uploads/allimg/160916/1-1609161G2060-L.jpg"
+                                        tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161G2060-L.jpg"
+                                        width="180" height="180"/></a></div>
+                                <div class="summary wow">
+                                    <p class="title"><a href="a/guanyu/tuandui/6.html"
+                                                        tppabs="http://dede24.va666.com/a/guanyu/tuandui/6.html">
+                                        Joseph</a></p>
+                                    <p class="subtitle">Joseph</p>
+                                    <p class="description wow">- station host computer desktop wallpaper cool
+                                        Sibutramine
+                                        furniture design activity design of judges- 2014-2015 Chinese Web Design
+                                        Alliance
+                                        design panel...</p>
+                                </div>
+                                <a href="a/guanyu/tuandui/6.html"
+                                   tppabs="http://dede24.va666.com/a/guanyu/tuandui/6.html"
+                                   target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li id="teamitem_2" class="wow">
+                                <div class="header wow" data-wow-delay=".2s"><a href="a/guanyu/tuandui/8.html"
+                                                                                tppabs="http://dede24.va666.com/a/guanyu/tuandui/8.html"
+                                                                                target="_blank"><img
+                                        src="uploads/allimg/160916/1-1609161GQ00-L.jpg"
+                                        tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161GQ00-L.jpg"
+                                        width="180" height="180"/></a></div>
+                                <div class="summary wow">
+                                    <p class="title"><a href="a/guanyu/tuandui/8.html"
+                                                        tppabs="http://dede24.va666.com/a/guanyu/tuandui/8.html">
+                                        Maggie</a></p>
+                                    <p class="subtitle">市场总监</p>
+                                    <p class="description wow">- NEWWEBPICK, the world's leading electronic design
+                                        magazine,
+                                        recommended by the designer and web site.- the case is included in the
+                                        NEWWEBPICK
+                                        electronic magazine (twenty-ninth)...</p>
+                                </div>
+                                <a href="a/guanyu/tuandui/8.html"
+                                   tppabs="http://dede24.va666.com/a/guanyu/tuandui/8.html"
+                                   target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                            </li>
+                            <li id="teamitem_3" class="wow">
+                                <div class="header wow" data-wow-delay=".3s"><a href="a/guanyu/tuandui/7.html"
+                                                                                tppabs="http://dede24.va666.com/a/guanyu/tuandui/7.html"
+                                                                                target="_blank"><img
+                                        src="uploads/allimg/160916/1-1609161G4150-L.jpg"
+                                        tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161G4150-L.jpg"
+                                        width="180" height="180"/></a></div>
+                                <div class="summary wow">
+                                    <p class="title"><a href="a/guanyu/tuandui/7.html"
+                                                        tppabs="http://dede24.va666.com/a/guanyu/tuandui/7.html">
+                                        Aaron</a></p>
+                                    <p class="subtitle">米其林三星主厨</p>
+                                    <p class="description wow">7年互联网经验，曾服务于搜狐火炬传递、北京建筑设计研究院 、日本电通等大型客户 ,对设计品质有执着追求
+                                        ......</p>
+                                </div>
+                                <a href="a/guanyu/tuandui/7.html"
+                                   tppabs="http://dede24.va666.com/a/guanyu/tuandui/7.html"
+                                   target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <a href="index.htm" tppabs="http://dede24.va666.com/" class="more wow">MORE<i
+                        class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+        <div id="mpartner" class="module">
+            <div class="bgmask"></div>
+            <div class="content layoutslider">
+                <div class="header wow fw" data-wow-delay=".1s"><p class="title">合作单位</p>
+                    <p class="subtitle">relationship</p></div>
+                <div class="module-content fw">
+                    <div class="wrapper">
+                        <ul class="content_list" data-options-ease="1" data-options-speed="0.5">
+                            <li id="partneritem_0" class="wow">
+                                <a title="uemo" target="_blank"><img src="uploads/allimg/160916/1-1609161HF40-L.png"
+                                                                     tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161HF40-L.png"
+                                                                     width="160" height="80"/></a>
+                                <a title="uemo" target="_blank"><img src="uploads/allimg/160916/1-1609161HJ50-L.png"
+                                                                     tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161HJ50-L.png"
+                                                                     width="160" height="80"/></a>
+                                <a title="uemo" target="_blank"><img src="uploads/allimg/160916/1-1609161HH30-L.png"
+                                                                     tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161HH30-L.png"
+                                                                     width="160" height="80"/></a>
+                                <a title="uemo" target="_blank"><img src="uploads/allimg/160916/1-1609161H6430-L.png"
+                                                                     tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161H6430-L.png"
+                                                                     width="160" height="80"/></a>
+                                <a title="uemo" target="_blank"><img src="uploads/allimg/160916/1-1609161H6260-L.png"
+                                                                     tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161H6260-L.png"
+                                                                     width="160" height="80"/></a>
+                                <a title="uemo" target="_blank"><img src="uploads/allimg/160916/1-1609161H6070-L.png"
+                                                                     tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161H6070-L.png"
+                                                                     width="160" height="80"/></a>
+                                <a title="uemo" target="_blank"><img src="uploads/allimg/160916/1-1609161H5480-L.png"
+                                                                     tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161H5480-L.png"
+                                                                     width="160" height="80"/></a>
+                                <a title="uemo" target="_blank"><img src="uploads/allimg/160916/1-1609161H5190-L.png"
+                                                                     tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161H5190-L.png"
+                                                                     width="160" height="80"/></a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mcontact" class="module">
+            <div class="bgmask"></div>
+            <div class="content">
+                <div class="header wow fadeInUp fw" data-wow-delay=".1s">
+                    <p class="title">反馈</p>
+                    <p class="subtitle">Contact Us</p>
+                </div>
+                <div id="contactlist" class="fw">
+                    <div id="contactinfo" class="fl wow" data-wow-delay=".2s">
+
+                        <h3 class="ellipsis name">MARRIOT.T</h3>
+                        <p class="ellipsis add"><span>地点：</span>Do You Best,Mutually Promote Symbiosis</p>
+                        <p class="ellipsis zip"><span>邮编：</span>4678900</p>
+                        <p class="ellipsis tel"><span>电话：</span>0755-88888888</p>
+                        <p class="ellipsis mobile"><span>手机：</span>18888888888</p>
+                        <p class="ellipsis email"><span>邮箱：</span>alice@88.com</p>
+                        <div><a class="fl" target="_blank" href="#"><i class="fa fa-weibo"></i></a><a class="fl"
+                                                                                                      target="_blank"
+                                                                                                      href="#"><i
+                                class="fa fa-qq"></i></a> <a id="mpbtn" class="fl"
+                                                             href="javascript:if(confirm('http://dede24.va666.com/templets/cloud_04/images/1438424052624.jpg  \n\n���ļ�δ�� Teleport Pro ���أ���Ϊ ����һ��λ���ѱ�վ����������ų���׼���������Ե�·����ַ��(Teleport Pro ���ԶԸ�ѡ��������ã�����ġ��������ԡ�-������淶��)  \n\n����Ҫ�ӷ�����������?'))window.location='http://dede24.va666.com/templets/cloud_04/images/1438424052624.jpg'"
+                                                             tppabs="http://dede24.va666.com/templets/cloud_04/images/1438424052624.jpg"><i
+                                class="fa fa-weixin"></i></a></div>
+                    </div>
+                    <div id="contactform" class="fr wow" data-wow-delay=".2s">
+                        <form action="/subReview" enctype="multipart/form-data" method="post">
+                            <input type="hidden" name="action" value="post"/>
+                            <input type="hidden" name="diyid" value="1"/>
+                            <input type="hidden" name="do" value="2"/>
+                            <p>
+                                <input type="text" class="inputtxt name" name="xm" placeholder="姓名" autocomplete="off"/>
+                            </p>
+                            <p>
+                                <input type="text" class="inputtxt email" name="yx" placeholder="邮箱"
+                                       autocomplete="off"/>
+                            </p>
+                            <p>
+                                <input type="text" class="inputtxt tel" name="dh" placeholder="电话" autocomplete="off"/>
+                            </p>
+                            <p>
+                                <textarea class="inputtxt cont" name="nr" placeholder="内容"
+                                          autocomplete="off"></textarea>
+                            </p>
+                            <p><input type="hidden" name="dede_fields" value="xm,text;yx,text;dh,text;nr,multitext"/>
+                                <input type="hidden" name="dede_fieldshash" value="2e77979dd224891e8d013062b31106d5"/>
+                                <input class="inputsub" type="submit" value="提交"/>
+                            </p>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="mnews" class="module" style="background-image:url(/templets/cloud_04/images/1468930282730.jpg);">
-        <div class="bgmask"></div>
-        <div class="content layoutnone">
-            <div class="header wow">
-                <p class="title">新闻</p>
-                <p class="subtitle">news</p>
-            </div>
-            <div class="module-content" id="newslist">
-                <div class="wrapper">
-                    <ul class="content_list" data-options-sliders="4" data-options-margin="0"
-                        data-options-ease="cubic-bezier(.73,-0.03,.24,1.01)" data-options-speed="0.8"
-                        data-options-mode="horizontal" data-options-wheel="0">
-                        <li id="newsitem_0" class='wow newstitem left'
-                        "><a class="newscontent" target="_blank" href="a/guanyu/xinwen/gongsixinwen/22.html"
-                             tppabs="http://dede24.va666.com/a/guanyu/xinwen/gongsixinwen/22.html">
-                        <div class="news_wrapper">
-                            <div class="newsbody">
-                                <p class="date"><span class="md">09-18<span>-</span></span><span
-                                        class="year">09-18</span></p>
-                                <p class="title">理想的下午，在家喝出女</p>
-                                <div class="separator"></div>
-                                <p class="description">合理的饮食，是身体健康的第一要素抵挡冬日的严寒一个人的餐桌，也可以有更其实除了各种游乐设施，既体现迪士尼童话主题，又入乡随</p>
-                            </div>
-                        </div>
-                        <div class="newsimg"
-                             style="background-image:url(/uploads/allimg/160916/1-1609161K1390-L.jpg)"></div>
-                    </a>
-                        <a href="a/guanyu/xinwen/gongsixinwen/22.html"
-                           tppabs="http://dede24.va666.com/a/guanyu/xinwen/gongsixinwen/22.html" target="_blank"
-                           class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li id="newsitem_1" class='wow newstitem right'
-                        "><a class="newscontent" target="_blank" href="a/guanyu/xinwen/xingyexinwen/25.html"
-                             tppabs="http://dede24.va666.com/a/guanyu/xinwen/xingyexinwen/25.html">
-                        <div class="news_wrapper">
-                            <div class="newsbody">
-                                <p class="date"><span class="md">09-18<span>-</span></span><span
-                                        class="year">09-18</span></p>
-                                <p class="title">食物有超乎想象的治愈力</p>
-                                <div class="separator"></div>
-                                <p class="description">除了面包和泡面之外，一个人的餐桌，也可以有更多选择一个人的生活除了面包和泡面之外，一个人的餐桌 ... ...</p>
-                            </div>
-                        </div>
-                        <div class="newsimg"
-                             style="background-image:url(/uploads/allimg/160916/1-1609161K4510-L.jpg)"></div>
-                    </a>
-                        <a href="a/guanyu/xinwen/xingyexinwen/25.html"
-                           tppabs="http://dede24.va666.com/a/guanyu/xinwen/xingyexinwen/25.html" target="_blank"
-                           class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li id="newsitem_2" class='wow newstitem right'
-                        "><a class="newscontent" target="_blank" href="a/guanyu/xinwen/gongsixinwen/23.html"
-                             tppabs="http://dede24.va666.com/a/guanyu/xinwen/gongsixinwen/23.html">
-                        <div class="news_wrapper">
-                            <div class="newsbody">
-                                <p class="date"><span class="md">09-17<span>-</span></span><span
-                                        class="year">09-17</span></p>
-                                <p class="title">菊苣烤龙虾配照烧鹅肝和</p>
-                                <div class="separator"></div>
-                                <p class="description">合理的饮食，是身体健康的第一要素抵挡冬日的严寒一个人的餐桌，也可以有更 ......</p>
-                            </div>
-                        </div>
-                        <div class="newsimg"
-                             style="background-image:url(/uploads/allimg/160916/1-1609161K2340-L.jpg)"></div>
-                    </a>
-                        <a href="a/guanyu/xinwen/gongsixinwen/23.html"
-                           tppabs="http://dede24.va666.com/a/guanyu/xinwen/gongsixinwen/23.html" target="_blank"
-                           class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li id="newsitem_3" class='wow newstitem right'
-                        "><a class="newscontent" target="_blank" href="a/guanyu/xinwen/xingyexinwen/24.html"
-                             tppabs="http://dede24.va666.com/a/guanyu/xinwen/xingyexinwen/24.html">
-                        <div class="news_wrapper">
-                            <div class="newsbody">
-                                <p class="date"><span class="md">09-17<span>-</span></span><span
-                                        class="year">09-17</span></p>
-                                <p class="title">西餐礼仪细节，让你成为</p>
-                                <div class="separator"></div>
-                                <p class="description">>除了面包和泡面之外，一个人的餐桌，也可以有更多选择一个人的生活 ......</p>
-                            </div>
-                        </div>
-                        <div class="newsimg"
-                             style="background-image:url(/uploads/allimg/160916/1-1609161H6260-L.png)"></div>
-                    </a>
-                        <a href="a/guanyu/xinwen/xingyexinwen/24.html"
-                           tppabs="http://dede24.va666.com/a/guanyu/xinwen/xingyexinwen/24.html" target="_blank"
-                           class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-
-
-                    </ul>
-                </div>
-            </div>
-            <div class="clear"></div>
-            <a href="a/guanyu/xinwen/index.htm" tppabs="http://dede24.va666.com/a/guanyu/xinwen/"
-               class="more wow">MORE<i class="fa fa-angle-right"></i></a>
-            <div style="height:0">&nbsp;</div>
-        </div>
-    </div>
-    <div id="mteam" data-title="" class="module">
-        <div class="bgmask"></div>
-        <div class="content layoutnone">
-            <div class="header wow">
-                <p class="title">团队</p>
-                <p class="subtitle"></p>
-            </div>
-            <div class="module-content fw">
-                <div class="wrapper">
-                    <ul class="content_list" data-options-sliders="3" data-options-margin="20"
-                        data-options-ease="cubic-bezier(.73,-0.03,.24,1.01)" data-options-speed="1">
-                        <li id="teamitem_1" class="wow">
-                            <div class="header wow" data-wow-delay=".1s"><a href="a/guanyu/tuandui/6.html"
-                                                                            tppabs="http://dede24.va666.com/a/guanyu/tuandui/6.html"
-                                                                            target="_blank"><img
-                                    src="uploads/allimg/160916/1-1609161G2060-L.jpg"
-                                    tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161G2060-L.jpg"
-                                    width="180" height="180"/></a></div>
-                            <div class="summary wow">
-                                <p class="title"><a href="a/guanyu/tuandui/6.html"
-                                                    tppabs="http://dede24.va666.com/a/guanyu/tuandui/6.html">
-                                    Joseph</a></p>
-                                <p class="subtitle">Joseph</p>
-                                <p class="description wow">- station host computer desktop wallpaper cool Sibutramine
-                                    furniture design activity design of judges- 2014-2015 Chinese Web Design Alliance
-                                    design panel...</p>
-                            </div>
-                            <a href="a/guanyu/tuandui/6.html" tppabs="http://dede24.va666.com/a/guanyu/tuandui/6.html"
-                               target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li id="teamitem_2" class="wow">
-                            <div class="header wow" data-wow-delay=".2s"><a href="a/guanyu/tuandui/8.html"
-                                                                            tppabs="http://dede24.va666.com/a/guanyu/tuandui/8.html"
-                                                                            target="_blank"><img
-                                    src="uploads/allimg/160916/1-1609161GQ00-L.jpg"
-                                    tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161GQ00-L.jpg"
-                                    width="180" height="180"/></a></div>
-                            <div class="summary wow">
-                                <p class="title"><a href="a/guanyu/tuandui/8.html"
-                                                    tppabs="http://dede24.va666.com/a/guanyu/tuandui/8.html">
-                                    Maggie</a></p>
-                                <p class="subtitle">市场总监</p>
-                                <p class="description wow">- NEWWEBPICK, the world's leading electronic design magazine,
-                                    recommended by the designer and web site.- the case is included in the NEWWEBPICK
-                                    electronic magazine (twenty-ninth)...</p>
-                            </div>
-                            <a href="a/guanyu/tuandui/8.html" tppabs="http://dede24.va666.com/a/guanyu/tuandui/8.html"
-                               target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-                        <li id="teamitem_3" class="wow">
-                            <div class="header wow" data-wow-delay=".3s"><a href="a/guanyu/tuandui/7.html"
-                                                                            tppabs="http://dede24.va666.com/a/guanyu/tuandui/7.html"
-                                                                            target="_blank"><img
-                                    src="uploads/allimg/160916/1-1609161G4150-L.jpg"
-                                    tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161G4150-L.jpg"
-                                    width="180" height="180"/></a></div>
-                            <div class="summary wow">
-                                <p class="title"><a href="a/guanyu/tuandui/7.html"
-                                                    tppabs="http://dede24.va666.com/a/guanyu/tuandui/7.html">
-                                    Aaron</a></p>
-                                <p class="subtitle">米其林三星主厨</p>
-                                <p class="description wow">7年互联网经验，曾服务于搜狐火炬传递、北京建筑设计研究院 、日本电通等大型客户 ,对设计品质有执着追求
-                                    ......</p>
-                            </div>
-                            <a href="a/guanyu/tuandui/7.html" tppabs="http://dede24.va666.com/a/guanyu/tuandui/7.html"
-                               target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
-                        </li>
-
-
-                    </ul>
-                </div>
-            </div>
-            <div class="clear"></div>
-            <a href="index.htm" tppabs="http://dede24.va666.com/" class="more wow">MORE<i class="fa fa-angle-right"></i></a>
-        </div>
-    </div>
-    <div id="mpartner" class="module">
-        <div class="bgmask"></div>
-        <div class="content layoutslider">
-            <div class="header wow fw" data-wow-delay=".1s"><p class="title">合作单位</p>
-                <p class="subtitle">relationship</p></div>
-            <div class="module-content fw">
-                <div class="wrapper">
-                    <ul class="content_list" data-options-ease="1" data-options-speed="0.5">
-                        <li id="partneritem_0" class="wow">
-                            <a title="uemo" target="_blank"><img src="uploads/allimg/160916/1-1609161HF40-L.png"
-                                                                 tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161HF40-L.png"
-                                                                 width="160" height="80"/></a>
-                            <a title="uemo" target="_blank"><img src="uploads/allimg/160916/1-1609161HJ50-L.png"
-                                                                 tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161HJ50-L.png"
-                                                                 width="160" height="80"/></a>
-                            <a title="uemo" target="_blank"><img src="uploads/allimg/160916/1-1609161HH30-L.png"
-                                                                 tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161HH30-L.png"
-                                                                 width="160" height="80"/></a>
-                            <a title="uemo" target="_blank"><img src="uploads/allimg/160916/1-1609161H6430-L.png"
-                                                                 tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161H6430-L.png"
-                                                                 width="160" height="80"/></a>
-                            <a title="uemo" target="_blank"><img src="uploads/allimg/160916/1-1609161H6260-L.png"
-                                                                 tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161H6260-L.png"
-                                                                 width="160" height="80"/></a>
-                            <a title="uemo" target="_blank"><img src="uploads/allimg/160916/1-1609161H6070-L.png"
-                                                                 tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161H6070-L.png"
-                                                                 width="160" height="80"/></a>
-                            <a title="uemo" target="_blank"><img src="uploads/allimg/160916/1-1609161H5480-L.png"
-                                                                 tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161H5480-L.png"
-                                                                 width="160" height="80"/></a>
-                            <a title="uemo" target="_blank"><img src="uploads/allimg/160916/1-1609161H5190-L.png"
-                                                                 tppabs="http://dede24.va666.com/uploads/allimg/160916/1-1609161H5190-L.png"
-                                                                 width="160" height="80"/></a>
-
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="mcontact" class="module">
-        <div class="bgmask"></div>
-        <div class="content">
-            <div class="header wow fadeInUp fw" data-wow-delay=".1s">
-                <p class="title">反馈</p>
-                <p class="subtitle">Contact Us</p>
-            </div>
-            <div id="contactlist" class="fw">
-                <div id="contactinfo" class="fl wow" data-wow-delay=".2s">
-
-                    <h3 class="ellipsis name">MARRIOT.T</h3>
-                    <p class="ellipsis add"><span>地点：</span>Do You Best,Mutually Promote Symbiosis</p>
-                    <p class="ellipsis zip"><span>邮编：</span>4678900</p>
-                    <p class="ellipsis tel"><span>电话：</span>0755-88888888</p>
-                    <p class="ellipsis mobile"><span>手机：</span>18888888888</p>
-                    <p class="ellipsis email"><span>邮箱：</span>alice@88.com</p>
-                    <div><a class="fl" target="_blank" href="#"><i class="fa fa-weibo"></i></a><a class="fl"
-                                                                                                  target="_blank"
-                                                                                                  href="#"><i
-                            class="fa fa-qq"></i></a> <a id="mpbtn" class="fl"
-                                                         href="javascript:if(confirm('http://dede24.va666.com/templets/cloud_04/images/1438424052624.jpg  \n\n���ļ�δ�� Teleport Pro ���أ���Ϊ ����һ��λ���ѱ�վ����������ų���׼���������Ե�·����ַ��(Teleport Pro ���ԶԸ�ѡ��������ã�����ġ��������ԡ�-������淶��)  \n\n����Ҫ�ӷ�����������?'))window.location='http://dede24.va666.com/templets/cloud_04/images/1438424052624.jpg'"
-                                                         tppabs="http://dede24.va666.com/templets/cloud_04/images/1438424052624.jpg"><i
-                            class="fa fa-weixin"></i></a></div>
-                </div>
-                <div id="contactform" class="fr wow" data-wow-delay=".2s">
-                    <form action="/subReview" enctype="multipart/form-data" method="post">
-                        <input type="hidden" name="action" value="post"/>
-                        <input type="hidden" name="diyid" value="1"/>
-                        <input type="hidden" name="do" value="2"/>
-                        <p>
-                            <input type="text" class="inputtxt name" name="xm" placeholder="姓名" autocomplete="off"/>
-                        </p>
-                        <p>
-                            <input type="text" class="inputtxt email" name="yx" placeholder="邮箱" autocomplete="off"/>
-                        </p>
-                        <p>
-                            <input type="text" class="inputtxt tel" name="dh" placeholder="电话" autocomplete="off"/>
-                        </p>
-                        <p>
-                            <textarea class="inputtxt cont" name="nr" placeholder="内容" autocomplete="off"></textarea>
-                        </p>
-                        <p><input type="hidden" name="dede_fields" value="xm,text;yx,text;dh,text;nr,multitext"/>
-                            <input type="hidden" name="dede_fieldshash" value="2e77979dd224891e8d013062b31106d5"/>
-                            <input class="inputsub" type="submit" value="提交"/>
-                        </p>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 </div>
 <div id="footer"><p>COPYRIGHT (©) 2016 Aclic Studio</p></div>
 

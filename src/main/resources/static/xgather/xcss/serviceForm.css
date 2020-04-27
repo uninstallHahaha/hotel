@@ -1,0 +1,70 @@
+body{
+    font-family: "Helvetica Neue","Raleway",sans-serif !important;
+}
+
+
+#banner{
+    height: 220px !important;
+}
+
+#postCont{
+    height: 400px;
+    display: flex;
+}
+
+.baseContent{
+    flex-grow: 1;
+    padding: 12px;
+}
+
+.orderinfo{
+    width: 400px;
+    padding: 12px;
+}
+
+.layui-input {
+    background: #212121 !important;
+    border: 0px !important;
+    border-bottom: 1px solid #545454 !important;
+    color: #fff !important;
+}
+.noblack{
+    background: #fff !important;
+    color: #1a1a1a !important;
+}
+
+.pricePlace{
+    position: inherit;
+}
+
+.checkoutBtn{
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ddae71;
+    color: #fff;
+    font-size: 14px;
+    float: right;
+    cursor: pointer;
+}
+
+.beizhu{
+    background: #212121 !important;
+    border: 0px !important;
+    border-bottom: 1px solid #545454 !important;
+    color: #fff !important;
+}
+
+.header{
+    padding-bottom: 0px !important;
+}
+
+.priceNum{
+    color: #fff;
+}
+
+.pricePlace{
+    border-top: 0px !important;
+}
