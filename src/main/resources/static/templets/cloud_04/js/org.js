@@ -14785,7 +14785,7 @@ YY[D2U.V0d][D2U.l2G] = function() {
 		j = "#contactform form",
 		U4 = '<div class="netmask fixed loading"><div><i class="fa fa-check-circle"></i></div></div>',
 		x4 = '"><p>微信扫一扫</p></div></div>',
-		b4 = '<div class="fixed" id="fixed_mp"><div class="fixed-container"><img src="',
+		b4 = '<div class="fixed" id="fixed_mp"><div class="fixed-container"><img width="258px" height="258px" src="/uploads/wei.jpg/',
 		c4 = "#mpbtn",
 		f4 = "#mcontact",
 		V4 = "layoutIndexInit",

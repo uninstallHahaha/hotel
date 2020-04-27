@@ -163,7 +163,8 @@
                 </ul>
             </li>
 
-            <li class="navitem"><a class='' href="/a/guanyu/tuandui/index.htm" tppabs="http://dede24.va666.com/a/guanyu/">关于
+            <li class="navitem"><a class='' href="/a/guanyu/tuandui/index.htm"
+                                   tppabs="http://dede24.va666.com/a/guanyu/">关于
             </a>
                 <ul class="subnav">
                     <li><a href="/a/guanyu/tuandui/index.htm" tppabs="http://dede24.va666.com/a/guanyu/tuandui">团队</a>
@@ -685,8 +686,8 @@
                                                                                                       target="_blank"
                                                                                                       href="#"><i
                                 class="fa fa-qq"></i></a> <a id="mpbtn" class="fl"
-                                                             href="javascript:if(confirm('http://dede24.va666.com/templets/cloud_04/images/1438424052624.jpg  \n\n���ļ�δ�� Teleport Pro ���أ���Ϊ ����һ��λ���ѱ�վ����������ų���׼���������Ե�·����ַ��(Teleport Pro ���ԶԸ�ѡ��������ã�����ġ��������ԡ�-������淶��)  \n\n����Ҫ�ӷ�����������?'))window.location='http://dede24.va666.com/templets/cloud_04/images/1438424052624.jpg'"
-                                                             tppabs="http://dede24.va666.com/templets/cloud_04/images/1438424052624.jpg"><i
+                                                             href="#"
+                        ><i
                                 class="fa fa-weixin"></i></a></div>
                     </div>
                     <div id="contactform" class="fr wow" data-wow-delay=".2s">
@@ -695,14 +696,16 @@
                             <input type="hidden" name="diyid" value="1"/>
                             <input type="hidden" name="do" value="2"/>
                             <p>
-                                <input type="text"  class="inputtxt name" id="xm" name="xm" placeholder="姓名" autocomplete="off"/>
-                            </p>
-                            <p>
-                                <input type="text"  class="inputtxt email" id="yx" name="yx" placeholder="邮箱"
+                                <input type="text" class="inputtxt name" id="xm" name="xm" placeholder="姓名"
                                        autocomplete="off"/>
                             </p>
                             <p>
-                                <input type="text"  class="inputtxt tel" id="dh" name="dh" placeholder="电话" autocomplete="off"/>
+                                <input type="text" class="inputtxt email" id="yx" name="yx" placeholder="邮箱"
+                                       autocomplete="off"/>
+                            </p>
+                            <p>
+                                <input type="text" class="inputtxt tel" id="dh" name="dh" placeholder="电话"
+                                       autocomplete="off"/>
                             </p>
                             <p>
                                 <textarea class="inputtxt cont" id="nr" name="nr" placeholder="内容"
@@ -721,11 +724,17 @@
 </div>
 <div id="footer"><p>COPYRIGHT (©) 2016 Aclic Studio</p></div>
 
-<div id="shares"><a id="sshare"><i class="fa fa-share-alt"></i></a><a
-        href="javascript:if(confirm('http://service.weibo.com/share/share.php?appkey=3206975293&  \n\n���ļ�δ�� Teleport Pro ���أ���Ϊ ��λ����ʼ��ַ�����õı߽���������·���С�  \n\n����Ҫ�ӷ�����������?'))window.location='http://service.weibo.com/share/share.php?appkey=3206975293&'"
-        tppabs="http://service.weibo.com/share/share.php?appkey=3206975293&" target="_blank" id="sweibo"><i
-        class="fa fa-weibo"></i></a><a href="javascript:;" id="sweixin"><i class="fa fa-weixin"></i></a><a
-        href="javascript:;" id="gotop"><i class="fa fa-angle-up"></i></a></div>
+<div id="shares">
+    <a id="sshare">
+        <i class="fa fa-share-alt">
+        </i>
+    </a>
+    <a href="#"  id="sweibo">
+        <i class="fa fa-weibo"></i>
+    </a>
+    <a href="javascript:;" id="sweixin"><i class="fa fa-weixin"></i></a>
+    <a href="javascript:;" id="gotop"><i class="fa fa-angle-up"></i></a>
+</div>
 <div class="fixed" id="fixed_weixin">
     <div class="fixed-container">
         <div id="qrcode"></div>
