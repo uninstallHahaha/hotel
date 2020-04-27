@@ -11,8 +11,11 @@
       tppabs="http://dede24.va666.com/templets/cloud_04/style/style.css">
 <link rel="stylesheet" type="text/css" href="templets/cloud_04/style/376.css"
       tppabs="http://dede24.va666.com/templets/cloud_04/style/376.css">
+
+<%--<script src="/xgather/xlib/jquery.min.js"></script>--%>
 <script type="text/javascript" src="templets/cloud_04/js/jquery-1.11.3.min.js"
         tppabs="http://dede24.va666.com/templets/cloud_04/js/jquery-1.11.3.min.js"></script>
+
 <script type="text/javascript" src="templets/cloud_04/js/org.js"
         tppabs="http://dede24.va666.com/templets/cloud_04/js/org.js" data-main="indexMain"></script>
 <meta http-equiv="mobile-agent" content="format=xhtml;url=m/index.html" tppabs="http://dede24.va666.com/m/index.php">
@@ -766,7 +769,8 @@
 <link rel="stylesheet" type="text/css" href="/xgather/xcss/dishDetail.css">
 
 <script src="/xgather/xlib/layui-v2.5.6/layui/layui.all.js"></script>
-<script src="/xgather/xlib/jquery.min.js"></script>
+<script src="/xgather/xlib/axios.min.js"></script>
+<%--<script src="/xgather/xlib/jquery.min.js"></script>--%>
 
 <link rel="stylesheet" type="text/css" href="/xgather/xcss/car.css">
 <link rel="stylesheet" type="text/css" href="/xgather/xlib/layui-v2.5.6/layui/css/layui.css">

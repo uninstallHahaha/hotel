@@ -97,18 +97,24 @@ var subTOCar = function () {
     var name = $('#dishname').val()
     var count = $('#dishcount').val()
     var price = $('#dishprice').val()
-    $.ajax({
-        url: '/addToCar',
-        data: {id: id, name: name, count: count, price: price},
+
+    let param = new URLSearchParams()
+    param.append('id', id)
+    param.append('name', name)
+    param.append('count', count)
+    param.append('price', price)
+    axios({
         method: 'post',
-        success: function (res) {
-            if (res == 1) {
-                layer.msg('添加成功')
-            } else {
-                layer.msg('添加失败')
-            }
-            layer.close(layerCount);
+        url: '/addToCar',
+        data: param
+    }).then(function (res) {
+        if (res.data == 1) {
+            layer.msg('添加成功')
+        } else {
+            layer.msg('添加失败')
         }
+        layer.close(layerCount);
+    }).catch(function (error) {
     })
 }
 
@@ -117,38 +123,46 @@ var subTOCar = function () {
 var modTOCar = function (){
     var id = $('#dishid').val()
     var name = $('#dishname').val()
-    var count = $('#dishcount').val()
-    var price = $('#dishprice').val()
-    $.ajax({
-        url: '/modToCar',
-        data: {id: id, name: name, count: count, price: price},
+    var count = parseInt($('#dishcount').val())
+    var price = parseInt($('#dishprice').val())
+    let param = new URLSearchParams()
+    param.append('id', id)
+    param.append('name', name)
+    param.append('count', count)
+    param.append('price', price)
+    axios({
         method: 'post',
-        success: function (res) {
-            if (res == 1) {
-                layer.msg('修改成功')
-                $('#subTOCar').unbind('click')
-                initCarDOM()
-            } else {
-                layer.msg('修改失败')
-            }
-            layer.close(layerCount);
+        url: '/modToCar',
+        data: param
+    }).then(function (res) {
+        if (res.data == 1) {
+            layer.msg('修改成功')
+            $('#subTOCar').unbind('click')
+            initCarDOM()
+        } else {
+            layer.msg('修改失败')
         }
+        layer.close(layerCount);
+    }).catch(function (error) {
     })
 }
 
 //删除购物车条目
 function delItemFromCar(ida) {
-    $.ajax({
-        url: 'delete',
-        data: {id: ida},
-        success: function (res) {
-            if(res == 1){
-                layer.msg('删除成功')
-                //重新加载购物车
-                initCarDOM()
-            }else{
-                layer.msg('删除失败')
-            }
+    let param = new URLSearchParams()
+    param.append('id', ida)
+    axios({
+        method: 'post',
+        url: '/delete',
+        data: param
+    }).then(function (res) {
+        if(res.data == 1){
+            layer.msg('删除成功')
+            //重新加载购物车
+            initCarDOM()
+        }else{
+            layer.msg('删除失败')
         }
+    }).catch(function (error) {
     })
 }
