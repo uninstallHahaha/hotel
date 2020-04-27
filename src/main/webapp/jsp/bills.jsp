@@ -114,9 +114,6 @@
                 <p class="subtitle">Bills</p>
             </div>
             <div id="category">
-                <a href="index.htm" tppabs="http://dede24.va666.com/a/guanyu/xinwen/" /a/caipin/" class='active' >全部</a>
-                <a href="xingyexinwen/index.htm" tppabs="http://dede24.va666.com/a/guanyu/xinwen/xingyexinwen/">行业动态</a>
-                <a href="gongsixinwen/index.htm" tppabs="http://dede24.va666.com/a/guanyu/xinwen/gongsixinwen/">公司新闻</a>
 
             </div>
             <div id="newslist">
@@ -124,25 +121,26 @@
 
                     <c:forEach var="b" items="${bills}">
 
-                        <div id="newsitem_0" class="wow newstitem left">
-                            <a class="newscontent" target="_blank" href="gongsixinwen/22.html">
+                        <div class="wow newstitem left" id="record${b.oid}">
+                            <a class="newscontent" href="javascript:void()" onclick="delBill('${b.oid}')">
                                 <div class="news_wrapper">
                                     <div class="newsbody">
                                         <p class="date">
-                                            <span class="md" style="width: 200px;">${b.ctime}
-<%--                                                <span>-</span>--%>
+                                            <span class="md"  style="width: 200px;">${b.ctime}
                                             </span>
-<%--                                            <span class="year">09-18</span></p>--%>
                                         <p class="title">总价: ${b.totalPrice}$</p>
                                         <div class="separator"></div>
                                         <p class="description">
-                                            合理的饮食，是身体健康的第一要素抵挡冬日的严寒一个人的餐桌，也可以有更其实除了各种游乐设施，既体现迪士尼童话主题，又入乡随......</p>
+                                            <c:forEach items="${b.items}" var="i">
+                                                ${i.name} x${i.count} <br>
+                                            </c:forEach>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="newsimg"
                                      style="background-image:url(/uploads/allimg/160916/bills<%=(int)(Math.floor(Math.random()*10)+1)%>.jpg)"></div>
                             </a>
-                            <a href="gongsixinwen/22.html"
+                            <a href="#"
                                class="details">more<i class="fa fa-angle-right"></i></a>
                         </div>
 
@@ -181,4 +179,9 @@
 </div>
 <div class="hide"></div>
 </body>
+
+<script src="/xgather/xlib/jquery.min.js"></script>
+<script src="/xgather/xlib/layer/layer.js"></script>
+<script src="/xgather/xjs/bills.js"></script>
+
 </html>

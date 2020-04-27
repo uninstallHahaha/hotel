@@ -29,4 +29,6 @@ public interface OrderIMapper {
     int updateByPrimaryKeySelective(OrderI record);
 
     int updateByPrimaryKey(OrderI record);
+
+    int delByOid(String id);
 }

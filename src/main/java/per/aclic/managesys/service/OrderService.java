@@ -25,4 +25,8 @@ public class OrderService {
     public List<OrderI> findAll() {
         return orderMapper.selectByExample(new OrderIExample());
     }
+
+    public int delOrder(String id) {
+        return orderMapper.delByOid(id);
+    }
 }

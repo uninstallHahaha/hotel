@@ -66,4 +66,16 @@ public class OrderController {
         return addRes;
     }
 
+
+
+    //删除服务
+    @ResponseBody
+    @RequestMapping("/delBill")
+    public int delBill(
+            HttpServletRequest request,
+            HttpServletResponse response,
+            String id) {
+        return orderService.delOrder(id);
+    }
+
 }

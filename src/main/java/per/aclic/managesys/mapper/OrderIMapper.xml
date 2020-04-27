@@ -95,16 +95,26 @@
     from orderi
     where id = #{id,jdbcType=VARCHAR}
   </select>
+
+
+  <delete id="delByOid" parameterType="java.lang.String">
+    delete from orderi
+    where oid = #{id,jdbcType=VARCHAR}
+  </delete>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from orderi
     where id = #{id,jdbcType=VARCHAR}
   </delete>
+
+
   <delete id="deleteByExample" parameterType="per.aclic.managesys.model.OrderIExample">
     delete from orderi
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
+
 
   <insert id="insert" parameterType="per.aclic.managesys.model.OrderI">
     insert into orderi (id, oid, username, 
