@@ -29,75 +29,68 @@
             src="../../../templets/cloud_04/images/logo.png"
             tppabs="http://dede24.va666.com/templets/cloud_04/images/logo.png" height="40"/></a>
         <ul id="nav">
-            <li class="navitem"><a href="../../../index.html" tppabs="http://dede24.va666.com/" target="_self">首页</a>
-            </li>
-            <li class="navitem"><a class='' href="../../caipin/index.htm" tppabs="http://dede24.va666.com/a/caipin/">菜品
+            <li class="navitem"><a class='active' href="/" tppabs="http://dede24.va666.com/"
+                                   target="_self">首页</a></li>
+            <li class="navitem"><a class='' href="/getDishList/0" tppabs="http://dede24.va666.com/a/caipin/">菜品
                 <!--
                 <i class='fa fa-angle-down'></i>
                 -->
             </a>
                 <ul class="subnav">
-                    <li><a href="../../caipin/toupan/index.htm" tppabs="http://dede24.va666.com/a/caipin/toupan">头盘</a>
-                    </li>
-                    <li><a href="../../caipin/liangtang/index.htm" tppabs="http://dede24.va666.com/a/caipin/liangtang">靓汤</a>
-                    </li>
-                    <li><a href="../../caipin/fucai/index.htm" tppabs="http://dede24.va666.com/a/caipin/fucai">副菜</a>
-                    </li>
-                    <li><a href="../../caipin/zhucai/index.htm" tppabs="http://dede24.va666.com/a/caipin/zhucai">主菜</a>
-                    </li>
-                    <li><a href="../../caipin/shuguo/index.htm" tppabs="http://dede24.va666.com/a/caipin/shuguo">蔬果</a>
-                    </li>
+                    <li><a href="/getDishList/1">头盘</a></li>
+                    <li><a href="/getDishList/2">副菜</a></li>
+                    <li><a href="/getDishList/3">靓汤</a></li>
+                    <li><a href="/getDishList/4">主菜</a></li>
+                    <li><a href="/getDishList/5">蔬果</a></li>
                 </ul>
             </li>
-            <li class="navitem"><a class='active' href="../index.htm" tppabs="http://dede24.va666.com/a/guanyu/">关于
-                <!--
-                <i class='fa fa-angle-down'></i>
-                -->
+
+            <li class="navitem"><a class='' href="/getWineList/0">酒水
             </a>
                 <ul class="subnav">
-                    <li><a href="../index.htm" tppabs="http://dede24.va666.com/a/guanyu/">关于</a></li>
-                    <li><a href="../tuandui/index.htm" tppabs="http://dede24.va666.com/a/guanyu/tuandui">团队</a></li>
-                    <li><a href="index.htm" tppabs="http://dede24.va666.com/a/guanyu/xinwen">新闻</a></li>
+                    <li><a href="/getWineList/1">餐前酒</a></li>
+                    <li><a href="/getWineList/2">佐餐酒</a></li>
+                    <li><a href="/getWineList/3">餐后酒</a></li>
+                    <li><a href="/getWineList/4">饮料</a></li>
                 </ul>
             </li>
-            <li class="navitem"><a class='' href="../../tuce/index.htm" tppabs="http://dede24.va666.com/a/tuce/">图册
-                <!--
-                <i class='fa fa-angle-down'></i>
-                -->
+
+            <li class="navitem"><a class='' href="/a/guanyu/tuandui/index.htm" tppabs="http://dede24.va666.com/a/guanyu/">关于
             </a>
                 <ul class="subnav">
-                    <li><a href="../../tuce/yingshicaiyao/index.htm"
-                           tppabs="http://dede24.va666.com/a/tuce/yingshicaiyao">英式菜肴</a></li>
-                    <li><a href="../../tuce/fashicaiyao/index.htm" tppabs="http://dede24.va666.com/a/tuce/fashicaiyao">法式菜肴</a>
-                    </li>
-                    <li><a href="../../tuce/meishicaiyao/index.htm"
-                           tppabs="http://dede24.va666.com/a/tuce/meishicaiyao">美式菜肴</a></li>
-                    <li><a href="../../tuce/deshicaiyao/index.htm" tppabs="http://dede24.va666.com/a/tuce/deshicaiyao">德式菜肴</a>
+                    <li><a href="/a/guanyu/tuandui/index.htm" tppabs="http://dede24.va666.com/a/guanyu/tuandui">团队</a>
                     </li>
                 </ul>
             </li>
-            <li class="navitem"><a class='' href="../../fuwu/index.htm" tppabs="http://dede24.va666.com/a/fuwu/">服务
-                <!--
-                <i class='fa fa-angle-down'></i>
-                -->
+            <li class="navitem"><a class='' href="/a/tuce/index.htm" tppabs="http://dede24.va666.com/a/tuce/">图册
             </a>
-
+                <ul class="subnav">
+                    <li><a href="/a/tuce/yingshicaiyao/index.htm" tppabs="http://dede24.va666.com/a/tuce/yingshicaiyao">英式菜肴</a>
+                    </li>
+                    <li><a href="/a/tuce/fashicaiyao/index.htm"
+                           tppabs="http://dede24.va666.com/a/tuce/fashicaiyao">法式菜肴</a></li>
+                    <li><a href="/a/tuce/meishicaiyao/index.htm" tppabs="http://dede24.va666.com/a/tuce/meishicaiyao">美式菜肴</a>
+                    </li>
+                    <li><a href="/a/tuce/deshicaiyao/index.htm"
+                           tppabs="http://dede24.va666.com/a/tuce/deshicaiyao">德式菜肴</a></li>
+                </ul>
             </li>
-            <li class="navitem"><a class='' href="../../lianxi/index.htm" tppabs="http://dede24.va666.com/a/lianxi/">联系
-                <!--
-                <i class='fa fa-angle-down'></i>
-                -->
-            </a>
 
+            <li class="navitem"><a class='active' href="/getServicePage">服务
+            </a>
+                <ul class="subnav">
+                    <li><a href="/getServicePage">呼叫服务</a></li>
+                    <li><a href="/getServiceListPage">服务记录</a></li>
+                </ul>
             </li>
-            <li class="navitem"><a class=''
-                                   href="javascript:if(confirm('http://www.22vd.com/11761.html  \n\n���ļ�δ�� Teleport Pro ���أ���Ϊ ��λ����ʼ��ַ�����õı߽���������·���С�  \n\n����Ҫ�ӷ�����������?'))window.location='http://www.22vd.com/11761.html'"
-                                   tppabs="http://www.22vd.com/11761.html">购买模板
-                <!--
-                <i class='fa fa-angle-down'></i>
-                -->
-            </a>
 
+            <li class="navitem">
+                <a class='' href="/getBillPage">账单
+                </a>
+            </li>
+            <li class="navitem">
+                <a class='' href="#" id="showCar">购物车
+                </a>
             </li>
         </ul>
         <div class="clear"></div>

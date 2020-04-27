@@ -163,26 +163,23 @@
                 </ul>
             </li>
 
-            <li class="navitem"><a class='' href="a/guanyu/index.htm" tppabs="http://dede24.va666.com/a/guanyu/">关于
+            <li class="navitem"><a class='' href="/a/guanyu/tuandui/index.htm" tppabs="http://dede24.va666.com/a/guanyu/">关于
             </a>
                 <ul class="subnav">
-                    <li><a href="a/guanyu/tuandui/index.htm" tppabs="http://dede24.va666.com/a/guanyu/tuandui">团队</a>
+                    <li><a href="/a/guanyu/tuandui/index.htm" tppabs="http://dede24.va666.com/a/guanyu/tuandui">团队</a>
                     </li>
                 </ul>
             </li>
-            <li class="navitem"><a class='' href="a/tuce/index.htm" tppabs="http://dede24.va666.com/a/tuce/">图册
-                <!--
-                <i class='fa fa-angle-down'></i>
-                -->
+            <li class="navitem"><a class='' href="/a/tuce/index.htm" tppabs="http://dede24.va666.com/a/tuce/">图册
             </a>
                 <ul class="subnav">
-                    <li><a href="a/tuce/yingshicaiyao/index.htm" tppabs="http://dede24.va666.com/a/tuce/yingshicaiyao">英式菜肴</a>
+                    <li><a href="/a/tuce/yingshicaiyao/index.htm" tppabs="http://dede24.va666.com/a/tuce/yingshicaiyao">英式菜肴</a>
                     </li>
-                    <li><a href="a/tuce/fashicaiyao/index.htm"
+                    <li><a href="/a/tuce/fashicaiyao/index.htm"
                            tppabs="http://dede24.va666.com/a/tuce/fashicaiyao">法式菜肴</a></li>
-                    <li><a href="a/tuce/meishicaiyao/index.htm" tppabs="http://dede24.va666.com/a/tuce/meishicaiyao">美式菜肴</a>
+                    <li><a href="/a/tuce/meishicaiyao/index.htm" tppabs="http://dede24.va666.com/a/tuce/meishicaiyao">美式菜肴</a>
                     </li>
-                    <li><a href="a/tuce/deshicaiyao/index.htm"
+                    <li><a href="/a/tuce/deshicaiyao/index.htm"
                            tppabs="http://dede24.va666.com/a/tuce/deshicaiyao">德式菜肴</a></li>
                 </ul>
             </li>
