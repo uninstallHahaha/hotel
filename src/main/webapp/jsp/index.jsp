@@ -735,7 +735,7 @@
     <a href="javascript:;" id="sweixin"><i class="fa fa-weixin"></i></a>
     <a href="javascript:;" id="gotop"><i class="fa fa-angle-up"></i></a>
 </div>
-<div class="fixed" id="fixed_weixin">
+<div class="fixed" id="fixed_weixinn">
     <div class="fixed-container">
         <div id="qrcode"></div>
         <p>扫描二维码分享到微信</p></div>

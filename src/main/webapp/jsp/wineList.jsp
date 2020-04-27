@@ -158,13 +158,13 @@
         tppabs="http://service.weibo.com/share/share.php?appkey=3206975293&" target="_blank" id="sweibo"><i
         class="fa fa-weibo"></i></a><a href="javascript:;" id="sweixin"><i class="fa fa-weixin"></i></a><a
         href="javascript:;" id="gotop"><i class="fa fa-angle-up"></i></a></div>
-<div class="fixed" id="fixed_weixin">
+<div class="fixed" id="fixed_weixinn">
     <div class="fixed-container">
         <div id="qrcode"></div>
         <p>扫描二维码分享到微信</p></div>
 </div>
 <div id="online_open"><i class="fa fa-comments-o"></i></div>
-<div id="online_lx">
+<div  id="online_lxx" style="display:none !important;">
     <div id="olx_head">在线咨询<i class="fa fa-times fr" id="online_close"></i></div>
     <ul id="olx_qq">
         <li><a href="tencent://message/?uin=8888899999&Site=uelike&Menu=yes"><i class="fa fa-qq"></i>8888899999</a></li>
