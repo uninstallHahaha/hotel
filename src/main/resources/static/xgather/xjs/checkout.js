@@ -1,3 +1,19 @@
+//取cookies
+function getCookie(name){
+    let arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+    if (arr != null) return unescape(arr[2]);
+    return null;
+}
+//删除cookie
+function delCookie(name){
+    var exp = new Date();
+    exp.setTime(exp.getTime() - 1);
+    var cval = getCookie(name);
+    if (cval != null)
+        document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString()+";path=/";
+}
+
+
 $(function () {
 
     //初始化购物车
@@ -37,6 +53,7 @@ $(function () {
             success: function (res) {
                 if (res == 1) {
                     layer.msg('订单提交成功')
+                    delCookie("CAR");
                     location.href="/getBillPage"
                 } else {
                     layer.msg('订单提交失败')
@@ -45,3 +62,4 @@ $(function () {
         })
     })
 })
+

@@ -131,7 +131,7 @@ public class CarController {
         //修改
         for (int y = 0; y < itmes.length; y++) {
             if (y != itemloc) {
-                res += itmes[y];
+                res += itmes[y] + "#";
             } else {
                 res += itmes[y].split("count:")[0] + "count:";
                 res += count + "#";
@@ -172,9 +172,10 @@ public class CarController {
             }
         }
         if (loc == -1) return 0;
+        //删除
         String resStr = "";
         for (int i = 0; i < itmes.length; i++) {
-            if (i != loc) resStr += itmes[i];
+            if (i != loc) resStr += itmes[i] + "#";
         }
         car_cookie.setValue(resStr);
         car_cookie.setPath(request.getContextPath() + "/");
