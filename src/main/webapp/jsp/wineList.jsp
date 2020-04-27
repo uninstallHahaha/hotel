@@ -151,7 +151,7 @@
         </div>
     </div>
 </div>
-<div id="footer"><p>COPYRIGHT (©) 2016 Aclic Studio</p></div>
+<div id="footer"><p>COPYRIGHT (©) 2020 Aclic Studio</p></div>
 
 <div id="shares"><a id="sshare"><i class="fa fa-share-alt"></i></a><a
         href="javascript:if(confirm('http://service.weibo.com/share/share.php?appkey=3206975293&  \n\n���ļ�δ�� Teleport Pro ���أ���Ϊ ��λ����ʼ��ַ�����õı߽���������·���С�  \n\n����Ҫ�ӷ�����������?'))window.location='http://service.weibo.com/share/share.php?appkey=3206975293&'"

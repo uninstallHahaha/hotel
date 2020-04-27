@@ -307,7 +307,7 @@
                                                         <p class="title">${d.name}</p>
                                                         <p class="subtitle">${d.sdetail}</p>
                                                         <p class="description hide">Semestral project - publicLocation:
-                                                            Nałęczów, PolandStatus: ideadate: 2016在线预约</p>
+                                                            Nałęczów, PolandStatus: ideadate: 2020在线预约</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -722,7 +722,7 @@
         </div>
     </div>
 </div>
-<div id="footer"><p>COPYRIGHT (©) 2016 Aclic Studio</p></div>
+<div id="footer"><p>COPYRIGHT (©) 2020 Aclic Studio</p></div>
 
 <div id="shares">
     <a id="sshare">
