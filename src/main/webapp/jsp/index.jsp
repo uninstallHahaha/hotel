@@ -693,27 +693,27 @@
                                 class="fa fa-weixin"></i></a></div>
                     </div>
                     <div id="contactform" class="fr wow" data-wow-delay=".2s">
-                        <form action="/subReview" enctype="multipart/form-data" method="post">
+                        <form enctype="multipart/form-data" method="post">
                             <input type="hidden" name="action" value="post"/>
                             <input type="hidden" name="diyid" value="1"/>
                             <input type="hidden" name="do" value="2"/>
                             <p>
-                                <input type="text" class="inputtxt name" name="xm" placeholder="姓名" autocomplete="off"/>
+                                <input type="text"  class="inputtxt name" id="xm" name="xm" placeholder="姓名" autocomplete="off"/>
                             </p>
                             <p>
-                                <input type="text" class="inputtxt email" name="yx" placeholder="邮箱"
+                                <input type="text"  class="inputtxt email" id="yx" name="yx" placeholder="邮箱"
                                        autocomplete="off"/>
                             </p>
                             <p>
-                                <input type="text" class="inputtxt tel" name="dh" placeholder="电话" autocomplete="off"/>
+                                <input type="text"  class="inputtxt tel" id="dh" name="dh" placeholder="电话" autocomplete="off"/>
                             </p>
                             <p>
-                                <textarea class="inputtxt cont" name="nr" placeholder="内容"
+                                <textarea class="inputtxt cont" id="nr" name="nr" placeholder="内容"
                                           autocomplete="off"></textarea>
                             </p>
                             <p><input type="hidden" name="dede_fields" value="xm,text;yx,text;dh,text;nr,multitext"/>
                                 <input type="hidden" name="dede_fieldshash" value="2e77979dd224891e8d013062b31106d5"/>
-                                <input class="inputsub" type="submit" value="提交"/>
+                                <input class="inputsub" type="button" onclick="subReview()" value="提交"/>
                             </p>
                         </form>
                     </div>
@@ -793,6 +793,7 @@
 <script src="/xgather/xlib/layer/layer.js"></script>
 <script src="/xgather/xjs/car.js"></script>
 <script src="/xgather/xjs/util.js"></script>
+<script src="/xgather/xjs/index.js"></script>
 <script src="/xgather/xjs/dishDetail.js"></script>
 
 
