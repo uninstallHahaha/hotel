@@ -759,7 +759,7 @@
                    class="layui-input">
         </div>
     </div>
-    <div class="okbtn" id="subTOCar" onclick="subTOCar()">确定</div>
+    <div class="okbtn" id="subTOCar">确定</div>
 </div>
 
 

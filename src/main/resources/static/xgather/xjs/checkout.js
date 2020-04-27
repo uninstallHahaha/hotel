@@ -22,6 +22,7 @@ $(function () {
             success: function (res) {
                 if (res == 1) {
                     layer.msg('订单提交成功')
+                    location.href="/getBillPage"
                 } else {
                     layer.msg('订单提交失败')
                 }

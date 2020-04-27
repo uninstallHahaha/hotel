@@ -75,7 +75,8 @@ function showCountModal(the) {
     $('#dishname').val($(the).attr('data-name'))
     $('#dishprice').val($(the).attr('data-price'))
     $('#dishcount').val($(the).attr('data-count'))
-    $('#subType').val("2")  //1:提交为新增 , 2:提交为修改
+    $('#subTOCar').unbind('click')
+    $('#subTOCar').bind('click',modTOCar)
     //弹窗
     layerCount = layer.open({
         type: 1,
@@ -91,21 +92,44 @@ function showCountModal(the) {
 }
 
 //提交到购物车cookie
-function subTOCar() {
+var subTOCar = function () {
     var id = $('#dishid').val()
     var name = $('#dishname').val()
     var count = $('#dishcount').val()
     var price = $('#dishprice').val()
-    var subType = $('#subType').val()
     $.ajax({
         url: '/addToCar',
-        data: {id: id, name: name, count: count, price: price, subType:subType},
+        data: {id: id, name: name, count: count, price: price},
         method: 'post',
         success: function (res) {
             if (res == 1) {
                 layer.msg('添加成功')
             } else {
                 layer.msg('添加失败')
+            }
+            layer.close(layerCount);
+        }
+    })
+}
+
+
+//修改购物车cookie , 即修改某条目的数量
+var modTOCar = function (){
+    var id = $('#dishid').val()
+    var name = $('#dishname').val()
+    var count = $('#dishcount').val()
+    var price = $('#dishprice').val()
+    $.ajax({
+        url: '/modToCar',
+        data: {id: id, name: name, count: count, price: price},
+        method: 'post',
+        success: function (res) {
+            if (res == 1) {
+                layer.msg('修改成功')
+                $('#subTOCar').unbind('click')
+                initCarDOM()
+            } else {
+                layer.msg('修改失败')
             }
             layer.close(layerCount);
         }

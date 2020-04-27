@@ -21,14 +21,7 @@ public class CarController {
                         String id,
                         String name,
                         int count,
-                        int price,
-                        String subType) {
-        if(subType.equals("1")){
-            //TODO 新增记录
-        }else if(subType.equals("2")){
-            //TODO 修改记录
-        }
-
+                        int price) {
         Cookie[] cookies = request.getCookies();
         Cookie car_cookie = null;
         for (Cookie c :
@@ -94,6 +87,66 @@ public class CarController {
         return 1;
     }
 
+    //修改购物车
+    @ResponseBody
+    @RequestMapping("/modToCar")
+    public int modTOCar(HttpServletRequest request,
+                        HttpServletResponse response,
+                        String id,
+                        String name,
+                        int count,
+                        int price) {
+        Cookie[] cookies = request.getCookies();
+        Cookie car_cookie = null;
+        for (Cookie c :
+                cookies) {
+            if (c.getName().equals("CAR")) {
+                car_cookie = c;
+                break;
+            }
+        }
+        if(car_cookie == null) return 0;
+        String car_cookieValue = car_cookie.getValue();
+        String[] itmes = car_cookieValue.split("#");
+        int itemloc = -1;
+        //查看是否存在该条目记录, 如果存在返回该条目位置
+        for (int i = 0; i < itmes.length; i++) {
+            String[] kvs = itmes[i].split("@");
+            boolean isit = false;
+            for (String k : kvs) {
+                String[] kav = k.split(":");
+                if (kav[0].equals("id") && kav[1].equals(id)) {
+                    isit = true;
+                    break;
+                }
+            }
+            if (isit) {
+                itemloc = i;
+                break;
+            }
+        }
+        String res = "";
+        if (itemloc == -1)  return 0;
+        //修改
+        for (int y = 0; y < itmes.length; y++) {
+            if (y != itemloc) {
+                res += itmes[y];
+            } else {
+                res += itmes[y].split("count:")[0]+"count:";
+                res += count+"#";
+            }
+        }
+        car_cookie.setValue(res);
+        car_cookie.setValue(car_cookie.getValue().replace(' ','-'));
+        car_cookie.setPath(request.getContextPath() + "/");
+        car_cookie.setMaxAge(7 * 24 * 60 * 60);
+        response.addCookie(car_cookie);
+        return 1;
+    }
+
+
+
+    //删除购物车条目
     @ResponseBody
     @RequestMapping("/delete")
     public int delItem(
