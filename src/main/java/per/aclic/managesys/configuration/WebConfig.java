@@ -27,8 +27,8 @@ public class WebConfig extends WebMvcConfigurerAdapter{
                 "/getsignupforadmin"
         };
         //注册拦截器
-//        registry.addInterceptor(interceptor)
-//                .addPathPatterns(addPathPattents).excludePathPatterns(excludePathPattents);
+        registry.addInterceptor(interceptor)
+                .addPathPatterns(addPathPattents).excludePathPatterns(excludePathPattents);
     }
 
 

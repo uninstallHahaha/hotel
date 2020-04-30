@@ -132,7 +132,7 @@
     $(this).parents(".layer-qq").hide();
 })
 </script>
-<div id="header">
+<a style="position: absolute;top: 10px;    right: 10px;width: 40px;    height: 40px;z-index: 999;    text-align: center;    border-radius: 100%;    border: 0px;    background: #fff0;    color: #fff;    display: flex;    justify-content: center;    align-items: center;    cursor: pointer;" title="退出登录" href="/logout" id="out"><i class="layui-icon layui-icon-logout"></i></a><a style="position: absolute;top: 10px;    right: 10px;width: 40px;    height: 40px;z-index: 999;    text-align: center;    border-radius: 100%;    border: 0px;    background: #fff0;    color: #fff;    display: flex;    justify-content: center;    align-items: center;    cursor: pointer;" title="退出登录" href="/logout" id="out"><i class="layui-icon layui-icon-logout"></i></a><div id="header">
     <div class="content"><a href="index.htm" tppabs="http://dede24.va666.com/" id="logo"><img
             src="templets/cloud_04/images/logo.png" tppabs="http://dede24.va666.com/templets/cloud_04/images/logo.png"
             height="40"/></a>

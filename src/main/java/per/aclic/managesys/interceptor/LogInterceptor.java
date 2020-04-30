@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import per.aclic.managesys.Utils.Utils;
+import per.aclic.managesys.model.User;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -27,12 +28,12 @@ public class LogInterceptor implements HandlerInterceptor {
             return true;
         }
         //login
-//        HttpSession session = request.getSession();
-//        User user = (User)session.getAttribute("USER");
-//        if(null == user){
-//            response.sendRedirect("/login");
-//            return false;
-//        }
+        HttpSession session = request.getSession();
+        User user = (User)session.getAttribute("USER");
+        if(null == user){
+            response.sendRedirect("/login.html");
+            return false;
+        }
         return true;
     }
 

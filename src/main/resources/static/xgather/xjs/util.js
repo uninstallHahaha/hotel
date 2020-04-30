@@ -29,10 +29,9 @@ function getItemsFormCookie() {
                 }
             })
             return resList
-        } else {
-            return null
         }
     }
+    return null
 }
 
 //初始化购物车dom
