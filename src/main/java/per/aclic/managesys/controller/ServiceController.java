@@ -45,10 +45,11 @@ public class ServiceController {
             String username,
             String userphone,
             String beizhu,
+            String room,
             int serviceType) {
         String thisid = Utils.genUUID();
         Serve serviceModel = new Serve(thisid,
-                username,userphone,"1",serviceType,beizhu,1);
+                username,userphone,room,serviceType,beizhu,1);
         int res = serviceService.addService(serviceModel);
         //随机延时处理serve
         TimeTaskToModServe tk = new TimeTaskToModServe(thisid);

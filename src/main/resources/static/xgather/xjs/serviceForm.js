@@ -6,6 +6,7 @@ $(function () {
         var username = $('#username').val()
         var userphone = $('#userphone').val()
         var beizhu = $('#beizhu').val()
+        var room = $('#room').val()
         var serviceType = $('#serviceType').val()
         if (username == "" || userphone == "" || beizhu=="") {
             layer.msg('请完善信息')
@@ -13,7 +14,8 @@ $(function () {
         }
         $.ajax({
             url: '/subServiceCall',
-            data: {username: username, userphone: userphone, beizhu: beizhu, serviceType: serviceType},
+            data: {username: username, userphone: userphone, beizhu: beizhu,room:room,
+                serviceType: serviceType},
             method: 'post',
             success: function (res) {
                 if (res == 1) {

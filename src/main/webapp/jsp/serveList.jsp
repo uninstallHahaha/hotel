@@ -21,6 +21,12 @@
         }
     }
 }</script>
+
+<style type="text/css">
+    .nopadding{
+        padding-left: 0px !important;
+    }
+</style>
 <title>服务 - 列表</title>
 </head>
 <body>
@@ -125,7 +131,8 @@
                                         <p class="date">
                                             <span class="md" style="width: 200px;">${b.ctime}
                                             </span>
-                                        <p class="title">服务类别: ${b.type==1?'主餐服务':(b.type==2?'酒水服务':'其他服务')}</p>
+                                        <p class="title nopadding">服务类别: ${b.type==1?'主餐服务':(b.type==2?'酒水服务':'其他服务')}</p>
+                                        <p class="title nopadding">餐桌号: ${b.room}号</p>
                                         <div class="separator"></div>
                                         <p class="description">
                                             服务状态: ${b.state==1?'已提交':(b.state==2?'已确认':'已处理')} <br>
