@@ -143,6 +143,18 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">餐桌号</label>
+                                    <div class="layui-input-block">
+                                        <select name="room" id="room" lay-filter="aihao">
+                                            <option value="1">1号餐桌</option>
+                                            <option value="2">2号餐桌</option>
+                                            <option value="3">3号餐桌</option>
+                                            <option value="4">4号餐桌</option>
+                                            <option value="5">5号餐桌</option>
+                                        </select>
+                                    </div>
+                                </div>
                                 <div class="layui-form-item layui-form-text">
                                     <label class="layui-form-label">备注</label>
                                     <div class="layui-input-block">

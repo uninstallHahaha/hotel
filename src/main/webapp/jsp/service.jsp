@@ -99,7 +99,7 @@
 <div id="sitecontent">
     <div class="npagePage Pageservice">
         <div id="banner" style="height: 220px;">
-            <div style="background-image:url(/templets/cloud_04/images/bg-food.jpg);"></div>
+            <div style="background-image:url(/uploads/checkout.jpg);background-size: 100%"></div>
         </div>
         <div class="content">
             <div class="header">
@@ -116,7 +116,7 @@
                             height="120"/>
                         <div>
                             <p class="title">主餐服务</p>
-                            <p class="description">提供主餐服务............</p>
+                            <p class="description">提供主餐服务</p>
                         </div>
                     </a>
                         <a href="/getServiceForm/1" tppabs="http://dede24.va666.com/a/fuwu/17.html" target="_blank"
@@ -130,7 +130,7 @@
                             height="120"/>
                         <div>
                             <p class="title">酒水服务</p>
-                            <p class="description">提供酒水类服务............</p>
+                            <p class="description">提供酒水类服务</p>
                         </div>
                     </a>
                         <a href="/getServiceForm/2" tppabs="http://dede24.va666.com/a/fuwu/18.html" target="_blank"
@@ -144,7 +144,7 @@
                             height="120"/>
                         <div>
                             <p class="title">其他服务</p>
-                            <p class="description">提供如下午茶, 餐后甜点等服务 ............</p>
+                            <p class="description">提供如下午茶, 餐后甜点等服务</p>
                         </div>
                     </a>
                         <a href="/getServiceForm/3" tppabs="http://dede24.va666.com/a/fuwu/19.html" target="_blank"

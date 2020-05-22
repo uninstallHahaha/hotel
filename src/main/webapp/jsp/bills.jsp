@@ -21,6 +21,12 @@
         }
     }
 }</script>
+<style type="text/css">
+    .nopadding{
+        padding-left: 0px !important;
+    }
+</style>
+
 <title>账单 - 列表</title>
 </head>
 <body>
@@ -121,7 +127,8 @@
                                         <p class="date">
                                             <span class="md"  style="width: 200px;">${b.ctime}
                                             </span>
-                                        <p class="title">总价: ${b.totalPrice}$</p>
+                                        <p class="title nopadding">餐桌号: ${b.room}号</p>
+                                        <p class="title nopadding">总价: ${b.totalPrice}$</p>
                                         <div class="separator"></div>
                                         <p class="description">
                                             <c:forEach items="${b.items}" var="i">

@@ -24,6 +24,7 @@ $(function () {
         var username = $('#username').val()
         var userphone = $('#userphone').val()
         var beizhu = $('#beizhu').val()
+        var room = $('#room').val()
         if (username == "" || userphone == "") {
             layer.msg('请完善信息')
             return
@@ -48,7 +49,8 @@ $(function () {
         }
         $.ajax({
             url: '/subOrder',
-            data: {username: username, userphone: userphone, beizhu: beizhu, items: JSON.stringify(items)},
+            data: {username: username, userphone: userphone, beizhu: beizhu,room:room,
+                items: JSON.stringify(items)},
             method: 'post',
             success: function (res) {
                 if (res == 1) {

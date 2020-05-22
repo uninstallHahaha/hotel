@@ -33,7 +33,9 @@ public class OrderController {
             String username,
             String userphone,
             String beizhu,
+            String room,
             String items) {
+        //解析菜单
         List<Item> itemList = new ArrayList<>();
         try {
             itemList = (List<Item>) XJSON.JSON2List(items, Item.class);
@@ -51,7 +53,7 @@ public class OrderController {
                     item.getName(),
                     item.getPrice(),
                     item.getCount(),
-                    Math.floor(Math.random() * 10) + "",
+                    room,
                     beizhu);
             int ers = orderService.addOrder(order);
             if (ers == 0) addRes = 0;
